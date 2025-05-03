@@ -1,1 +1,2 @@
-基于深圳北理莫斯科大学 北极熊战队导航修改（https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav）
+思玄战队2025导航包  
+基于ROS2-Humble的Navigation2编写
