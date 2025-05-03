@@ -9,20 +9,30 @@
   - ROS2-Humble 推荐使用：'wget http://fishros.com/install -O fishros && . fishros'
 2. **依赖安装**:
   - small_gicp点云库
-     `sudo apt install -y libeigen3-dev libomp-dev
+     ```bash
+     sudo apt install -y libeigen3-dev libomp-dev
      git clone https://github.com/koide3/small_gicp.git
      cd small_gicp
      mkdir build && cd build
      cmake .. -DCMAKE_BUILD_TYPE=Release && make -j
      sudo make install
      cd ..
-     rm -rf ./small_gicp`
+     rm -rf ./small_gicp
+     ```
 3. **部署代码**
-`mkdir -p ros_ws /
-cd ~/ros_ws`
-`git clone --recursive https://github.com/Abcd2024abc/SX_RM_Navigation.git src/SX_RM_Navigation`
-`rosdep install -r --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y`
-`colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release`
+```bash
+mkdir -p ros_ws /
+cd ~/ros_ws
+```
+```bash
+git clone --recursive https://github.com/Abcd2024abc/SX_RM_Navigation.git src/SX_RM_Navigation
+```
+```bash
+rosdep install -r --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
+```
+```bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
 
 ### 1. 地图代价扩展模块（`map_cost_extend`）
 - **功能**: 提供基于点云强度的代价地图扩展功能。
