@@ -1,0 +1,9 @@
+启动导航 ros2 launch SX_start SX_start.py
+
+开始比赛ros2 service call red_standard_robot1/start_match std_srvs/srv/SetBool "{data: true}"
+
+构建功能包colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+参数设置位置：
+    启动参数：Decision_tree/SX_start/config
+    导航参数：Path_Navigation/nav_bringup/config

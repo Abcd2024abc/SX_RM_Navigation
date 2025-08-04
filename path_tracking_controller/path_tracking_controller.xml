@@ -1,9 +1,0 @@
-<class_libraries>
-    <library path="path_tracking_controller">
-        <class type="path_tracking_controller::PathTrackingController" base_class_type="nav2_core::Controller">
-            <description>
-                path_tracking_controller
-            </description>
-        </class>
-    </library>
-</class_libraries>

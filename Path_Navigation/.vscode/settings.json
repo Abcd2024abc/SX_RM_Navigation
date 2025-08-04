@@ -1,0 +1,25 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/lin/SX_RM/Path_Navigation/install/nav_decision_maker/local/lib/python3.10/dist-packages",
+        "/home/lin/SX_RM/Path_Navigation/install/spin_conversion/local/lib/python3.10/dist-packages",
+        "/home/lin/SX_RM/Path_Navigation/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/home/lin/SX_RM/Simulator/build/sdformat_tools",
+        "/home/lin/SX_RM/Simulator/install/sdformat_tools/lib/python3.10/site-packages",
+        "/home/lin/SX_RM/Simulator/install/rmoss_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/lin/SX_RM/Path_Navigation/install/nav_decision_maker/local/lib/python3.10/dist-packages",
+        "/home/lin/SX_RM/Path_Navigation/install/spin_conversion/local/lib/python3.10/dist-packages",
+        "/home/lin/SX_RM/Path_Navigation/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/home/lin/SX_RM/Simulator/build/sdformat_tools",
+        "/home/lin/SX_RM/Simulator/install/sdformat_tools/lib/python3.10/site-packages",
+        "/home/lin/SX_RM/Simulator/install/rmoss_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "files.associations": {
+        "chrono": "cpp"
+    }
+}

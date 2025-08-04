@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lin/SX_RM/Path_Navigation/install/nav_decision_maker/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/spin_conversion/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/small_gicp_relocalization/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/sensor_scan_generation/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/pointcloud_to_laserscan/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/path_tracking_controller/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/map_cost_extend/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/loam_interface/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/livox_ros_driver2/include/**",
+        "/home/lin/SX_RM/Path_Navigation/install/ign_sim_pointcloud_tool/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_cam/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_util/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_projectile_motion/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_gz_cam/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_gz_bridge/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_gz_base/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_base/include/**",
+        "/home/lin/SX_RM/Simulator/install/rmoss_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/lin/SX_RM/Controller_maker/src/nav_communication/include/**",
+        "/home/lin/SX_RM/Controller_maker/src/nav_decision_maker/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

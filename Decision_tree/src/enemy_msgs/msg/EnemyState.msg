@@ -1,0 +1,2 @@
+bool enemy_lock
+float64 enemy_distance

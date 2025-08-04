@@ -1,0 +1,12 @@
+文件结构：
+
+decision_tree/
+├── __init__.py
+├── decision_tree.py          # 决策树主逻辑
+├── exploration.py            # 探索策略
+├── game_logic.py             # 游戏逻辑
+├── navigation.py             # 导航相关功能
+├── q_learning.py             # Q表处理
+├── state_processor.py        # 奖励处理
+├── utils.py                  # 工具函数
+└── verify_connection.py      # 连接验证
