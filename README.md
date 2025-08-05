@@ -7,9 +7,9 @@
 ## 部署说明
 1. **环境配置**
   - ROS2-Humble 推荐使用小鱼ROS：
-    '''bash
+```bash
     wget http://fishros.com/install -O fishros && . fishros
-    '''
+```
 2. **依赖安装**
   - small_gicp点云库
      ```bash
@@ -46,8 +46,8 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
    - 根据模块需求安装额外的依赖（如 PCL、Eigen 等）。
 
 2. **项目说明**:
-   -Decision_tree为决策树部分，基于DQL算法开发，主要作用是为导航提供行为决策，以下为文件结构：
-   '''bash
+   - Decision_tree为决策树部分，基于DQL算法开发，主要作用是为导航提供行为决策，以下为文件结构：
+```bash
    decision_tree/
    ├── __init__.py
    ├── decision_tree.py          # 决策树主逻辑
@@ -58,7 +58,7 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
    ├── state_processor.py        # 奖励处理
    ├── utils.py                  # 工具函数
    └── verify_connection.py      # 连接验证
-   '''
-   -Path_Navigation为导航实现部分
+```
+   - Path_Navigation为导航实现部分
 
-   -水平有限，如有不足请见谅
+   - 水平有限，如有不足请见谅
