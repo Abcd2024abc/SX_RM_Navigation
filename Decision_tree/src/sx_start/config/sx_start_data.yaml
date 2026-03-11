@@ -1,0 +1,5 @@
+namespace: red_standard_robot1   # 指定机器人的命名空间。
+decision: True # 决策层
+nav: True # 导航层
+connection: False # 连接层
+model: True    # 是否启动仿真模式。
