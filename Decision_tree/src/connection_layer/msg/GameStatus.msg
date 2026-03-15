@@ -1,3 +1,5 @@
 ## 游戏状态信息
-uint8 game_progress    # 比赛进程(0=未开始,1=进行中,2=结束)
-uint16 stage_remain_time # 当前阶段剩余时间(单位:秒)
+float32 progress    # 比赛进程(0=未开始,1=准备,2=自检，3=倒计时，4=比赛中，5=结束)
+float32 remaining # 当前剩余时间(单位:秒)
+
+float32 gain # 中心增益点占领状态(0=未占领，1=己方占领，2=敌方占领，3=争夺)

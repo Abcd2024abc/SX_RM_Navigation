@@ -11,7 +11,6 @@
 
 // 添加游戏状态消息
 #include "connection_layer/msg/game_status.hpp"
-#include "connection_layer/msg/rfid_status.hpp"
 #include "connection_layer/msg/robot_status.hpp"
 
 #include <memory>
@@ -54,8 +53,8 @@ struct GameState
     : game_progress(0)
     , stage_remain_time(0)
     , center_gain_point(0)
-    , current_hp(100)
-    , maximum_hp(100)
+    , current_hp(0)
+    , maximum_hp(0)
     , last_attack_time(0.0)
   {
     under_attack = false;
@@ -148,7 +147,6 @@ private:
 
   // 游戏状态订阅器
   rclcpp::Subscription<connection_layer::msg::GameStatus>::SharedPtr game_status_sub_;
-  rclcpp::Subscription<connection_layer::msg::RfidStatus>::SharedPtr rfid_status_sub_;
   rclcpp::Subscription<connection_layer::msg::RobotStatus>::SharedPtr robot_status_sub_;
 
   // 定时器
@@ -172,7 +170,6 @@ private:
     node->declare_parameter<T>(params_name, default_val);
     node->get_parameter(params_name, target);
   }
-  void declare_parameters();
   void set_parameters();
   void calculate_enemy_base_position();
   void initialize_subscriptions();
@@ -182,7 +179,6 @@ private:
   // 回调函数
   void map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg);
   void game_status_callback(const connection_layer::msg::GameStatus::SharedPtr msg);
-  void rfid_status_callback(const connection_layer::msg::RfidStatus::SharedPtr msg);
   void robot_status_callback(const connection_layer::msg::RobotStatus::SharedPtr msg);
 
   // 定时器回调
@@ -218,7 +214,7 @@ private:
   void handle_navigating_state();
 
   // 决策辅助方法
-  bool is_center_captured() const;
+  double center_captured() const;
   bool is_low_hp() const;
   bool is_safe_hp() const;
   bool is_normal_hp() const;

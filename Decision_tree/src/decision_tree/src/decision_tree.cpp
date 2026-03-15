@@ -106,11 +106,6 @@ void DecisionTree::initialize_subscriptions()
       "game_status", rclcpp::QoS(10).reliable(),
       [this](const connection_layer::msg::GameStatus::SharedPtr msg) { game_status_callback(msg); });
 
-  // RFID状态订阅
-  rfid_status_sub_ = this->create_subscription<connection_layer::msg::RfidStatus>(
-      "rfid_status", rclcpp::QoS(10).reliable(),
-      [this](const connection_layer::msg::RfidStatus::SharedPtr msg) { rfid_status_callback(msg); });
-
   // 机器人状态订阅
   robot_status_sub_ = this->create_subscription<connection_layer::msg::RobotStatus>(
       "robot_status", rclcpp::QoS(10).reliable(),
@@ -177,21 +172,31 @@ void DecisionTree::game_status_callback(const connection_layer::msg::GameStatus:
   std::lock_guard<std::mutex> lock(game_state_mutex_);
 
   // 更新游戏状态
-  game_state_.game_progress = msg->game_progress;
-  game_state_.stage_remain_time = msg->stage_remain_time;
+  game_state_.game_progress = msg->progress;
+  game_state_.stage_remain_time = msg->remaining;
+
+  game_state_.center_gain_point = msg->gain;
 
   // 根据比赛进程调整决策状态
   switch (game_state_.game_progress)
   {
-    case 0:  // 未开始
+    case 0:
+      break;
+
+    case 1:
+      break;
+
+    case 2:
+      break;
+
+    case 3:
       if (state_.current_state != DecisionState::WAITING_FOR_START)
       {
         change_state(DecisionState::WAITING_FOR_START);
-        log_info("比赛未开始，进入等待状态");
       }
       break;
 
-    case 1:  // 进行中
+    case 4:
       if (state_.current_state == DecisionState::WAITING_FOR_START || state_.current_state == DecisionState::IDLE)
       {
         change_state(DecisionState::CAPTURING_CENTER);
@@ -199,7 +204,7 @@ void DecisionTree::game_status_callback(const connection_layer::msg::GameStatus:
       }
       break;
 
-    case 2:  // 结束
+    case 5:
       change_state(DecisionState::PAUSED);
       cancel_navigation();
       log_info("比赛结束，停止所有行动");
@@ -210,22 +215,15 @@ void DecisionTree::game_status_callback(const connection_layer::msg::GameStatus:
             ", 剩余时间: " + std::to_string(game_state_.stage_remain_time) + "秒");
 }
 
-void DecisionTree::rfid_status_callback(const connection_layer::msg::RfidStatus::SharedPtr msg)
-{
-  std::lock_guard<std::mutex> lock(game_state_mutex_);
-
-  game_state_.center_gain_point = msg->center_gain_point;
-
-  log_debug("增益点状态更新: " + std::to_string(game_state_.center_gain_point));
-}
-
 void DecisionTree::robot_status_callback(const connection_layer::msg::RobotStatus::SharedPtr msg)
 {
   std::lock_guard<std::mutex> lock(game_state_mutex_);
 
+  if (game_state_.maximum_hp == 0)
+    game_state_.maximum_hp = msg->hp;
   // 记录血量变化
   static uint16_t previous_hp = game_state_.current_hp;
-  uint16_t current_hp = msg->current_hp;
+  uint16_t current_hp = msg->hp;
 
   if (current_hp < previous_hp)
   {
@@ -238,7 +236,6 @@ void DecisionTree::robot_status_callback(const connection_layer::msg::RobotStatu
   // 更新血量
   previous_hp = current_hp;
   game_state_.current_hp = current_hp;
-  game_state_.maximum_hp = msg->maximum_hp;
 
   log_debug("机器人状态更新 - 血量: " + std::to_string(game_state_.current_hp) + "/" +
             std::to_string(game_state_.maximum_hp) + " (" + std::to_string(get_hp_percentage() * 100) + "%)");
@@ -327,7 +324,7 @@ void DecisionTree::decision_tree_callback()
   {
     std::lock_guard<std::mutex> lock(game_state_mutex_);
     if (game_state_.game_progress != 1)
-    { 
+    {
       // 如果当前不是等待状态，且比赛未开始或已结束，则暂停
       if (state_.current_state != DecisionState::WAITING_FOR_START && state_.current_state != DecisionState::PAUSED &&
           state_.current_state != DecisionState::IDLE)
@@ -524,8 +521,7 @@ void DecisionTree::nav_feedback_callback(GoalHandleNavigateToPose::SharedPtr,
                                          const std::shared_ptr<const NavigateToPose::Feedback> feedback)
 {
   RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "导航进度 - 剩余距离: %.2f米, 导航时间: %d秒",
-                       feedback->distance_remaining,
-                       feedback->navigation_time.sec);
+                       feedback->distance_remaining, feedback->navigation_time.sec);
 }
 
 void DecisionTree::nav_result_callback(const GoalHandleNavigateToPose::WrappedResult& result)
@@ -609,43 +605,42 @@ void DecisionTree::update_decision_state()
   std::lock_guard<std::mutex> lock(game_state_mutex_);
 
   // 规则1: 当前血量低时返回基地补充
-  if (is_low_hp() && state_.current_state != DecisionState::RETURNING_TO_BASE)
-  {
-    change_state(DecisionState::RETURNING_TO_BASE);
-    return;
-  }
+  // if (is_low_hp() && state_.current_state != DecisionState::RETURNING_TO_BASE)
+  // {
+  //   change_state(DecisionState::RETURNING_TO_BASE);
+  //   return;
+  // }
 
-  // 规则2: 正在返回基地，血量补充到90%以上继续行动
-  if (state_.current_state == DecisionState::RETURNING_TO_BASE && is_safe_hp())
-  {
-    change_state(DecisionState::CAPTURING_CENTER);
-    return;
-  }
+  // // 规则2: 正在返回基地，血量补充到90%以上继续行动
+  // if (state_.current_state == DecisionState::RETURNING_TO_BASE && is_safe_hp())
+  // {
+  //   change_state(DecisionState::CAPTURING_CENTER);
+  //   return;
+  // }
 
-  // 规则3: 如果不在其他特殊状态，检查是否需要抢占增益点
-  if (state_.current_state != DecisionState::RETURNING_TO_BASE &&
-      state_.current_state != DecisionState::APPROACHING_ENEMY && !is_center_captured())
-  {
-    change_state(DecisionState::CAPTURING_CENTER);
-    return;
-  }
+  // // 规则3: 如果不在其他特殊状态，检查是否需要抢占增益点
+  // if (state_.current_state != DecisionState::RETURNING_TO_BASE &&
+  //     state_.current_state != DecisionState::APPROACHING_ENEMY && !is_center_captured())
+  // {
+  //   change_state(DecisionState::CAPTURING_CENTER);
+  //   return;
+  // }
 
-  // 规则4: 当血量充足（50%以上）且增益点为占领状态，15秒未受到攻击，尝试接近敌方基地
-  if (is_center_captured() && is_normal_hp() && has_not_been_attacked_for(params_.decision_params.no_attack_duration) &&
-      state_.current_state != DecisionState::APPROACHING_ENEMY)
-  {
-    change_state(DecisionState::APPROACHING_ENEMY);
-    return;
-  }
+  // // 规则4: 当血量充足（50%以上）且增益点为占领状态，15秒未受到攻击，尝试接近敌方基地
+  // if (is_normal_hp() && has_not_been_attacked_for(params_.decision_params.no_attack_duration) &&
+  //     state_.current_state != DecisionState::APPROACHING_ENEMY)
+  // {
+  //   change_state(DecisionState::APPROACHING_ENEMY);
+  //   return;
+  // }
 
-  // 规则5: 如果正在接近敌方基地但条件不再满足，返回抢占中心点
-  if (state_.current_state == DecisionState::APPROACHING_ENEMY &&
-      (!is_normal_hp() || !is_center_captured() ||
-       !has_not_been_attacked_for(params_.decision_params.no_attack_duration)))
-  {
-    change_state(DecisionState::CAPTURING_CENTER);
-    return;
-  }
+  // // 规则5: 如果正在接近敌方基地但条件不再满足，返回抢占中心点
+  // if (state_.current_state == DecisionState::APPROACHING_ENEMY &&
+  //     (!is_normal_hp() || !has_not_been_attacked_for(params_.decision_params.no_attack_duration)))
+  // {
+  //   change_state(DecisionState::CAPTURING_CENTER);
+  //   return;
+  // }
 }
 
 void DecisionTree::execute_decision_state()
@@ -775,10 +770,10 @@ void DecisionTree::handle_navigating_state()
 
 // =============== 决策辅助方法 ===============
 
-bool DecisionTree::is_center_captured() const
+double DecisionTree::center_captured() const
 {
   // 假设增益点状态为非0表示已占领
-  return game_state_.center_gain_point != 0;
+  return game_state_.center_gain_point;
 }
 
 bool DecisionTree::is_low_hp() const
