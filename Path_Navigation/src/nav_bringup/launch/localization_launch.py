@@ -116,10 +116,10 @@ def generate_launch_description():
         "log_level", default_value="info", description="log level"
     )
 
-    start_small_point_lio_node = Node(
-        package="small_point_lio",
+    start_point_lio_node = Node(
+        package="point_lio",
         executable="pointlio_mapping",
-        name="small_point_lio",
+        name="point_lio",
         output="screen",
         respawn=use_respawn,
         respawn_delay=2.0,
@@ -219,7 +219,7 @@ def generate_launch_description():
     ld.add_action(declare_log_level_cmd)
 
     # Add the actions to launch all of the localiztion nodes
-    ld.add_action(start_small_point_lio_node)
+    ld.add_action(start_point_lio_node)
     ld.add_action(load_nodes)
     ld.add_action(load_composable_nodes)
 
