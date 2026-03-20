@@ -15,7 +15,6 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
   <test_depend>nav_bringup</test_depend>
-  <test_depend>rmu_gazebo_simulator</test_depend>
   <test_depend>connection_layer</test_depend>
   <test_depend>decision_tree</test_depend>
 

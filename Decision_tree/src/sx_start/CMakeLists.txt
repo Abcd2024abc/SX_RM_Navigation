@@ -15,7 +15,6 @@ install(DIRECTORY
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(nav_bringup REQUIRED)
-find_package(rmu_gazebo_simulator REQUIRED)
 find_package(connection_layer REQUIRED)
 find_package(decision_tree REQUIRED)
 

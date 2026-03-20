@@ -23,7 +23,7 @@
 #include <atomic>
 #include <functional>
 
-namespace decision
+namespace decision_tree
 {
 
 // 决策状态枚举
@@ -50,12 +50,7 @@ struct GameState
   bool under_attack;
 
   GameState()
-    : game_progress(0)
-    , stage_remain_time(0)
-    , center_gain_point(0)
-    , current_hp(0)
-    , maximum_hp(0)
-    , last_attack_time(0.0)
+    : game_progress(0), stage_remain_time(0), center_gain_point(0), current_hp(0), maximum_hp(0), last_attack_time(0.0)
   {
     under_attack = false;
   }
@@ -237,6 +232,6 @@ private:
   std::string state_to_string(DecisionState state) const;
 };
 
-}  // namespace decision
+}  // namespace decision_tree
 
 #endif  // DECISION_TREE_HPP

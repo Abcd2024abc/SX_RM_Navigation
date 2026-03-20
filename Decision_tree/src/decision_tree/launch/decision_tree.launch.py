@@ -24,7 +24,7 @@ def generate_launch_description():
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         "use_sim_time",
-        default_value=False,
+        default_value="false",
         description="Use sim time"
     )
 
@@ -51,7 +51,7 @@ def generate_launch_description():
         composable_node_descriptions=[
             ComposableNode(
                 package='decision_tree',
-                plugin='decision::DecisionTree',
+                plugin='decision_tree::DecisionTree',
                 name='decision_tree',
                 namespace=namespace,
                 parameters=[params_file],

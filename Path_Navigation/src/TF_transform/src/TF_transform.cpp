@@ -43,7 +43,7 @@ public:
     geometry_msgs::msg::TransformStamped dynamic_transform;
     dynamic_transform.header.stamp = this->now();
     dynamic_transform.header.frame_id = "base_footprint";
-    dynamic_transform.child_frame_id = "gimbal";
+    dynamic_transform.child_frame_id = "gimbal_yaw";
     dynamic_transform.transform.translation.x = 0.0;
     dynamic_transform.transform.translation.y = 0.0;
     dynamic_transform.transform.translation.z = 0.28;

@@ -6,7 +6,6 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import (
     DeclareLaunchArgument,
-    GroupAction,
     IncludeLaunchDescription,
     SetEnvironmentVariable,
     TimerAction,
@@ -14,9 +13,6 @@ from launch.actions import (
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch.conditions import IfCondition
-from launch_ros.actions import Node, PushRosNamespace, SetRemap
-from launch_ros.descriptions import ParameterFile
-from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     param_data = {}
@@ -101,7 +97,7 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource(
                     os.path.join(launch_connection, "connection_layer.launch.py")
                 ),
-                condition=IfCondition(PythonExpression(['"', connection, '" == "true"'])),
+                condition=IfCondition(PythonExpression(connection)),
                 launch_arguments=[
                     ("namespace", namespace),
                     ("log_level", log_level),
@@ -111,13 +107,13 @@ def generate_launch_description():
     )
 
     nav_launch = TimerAction(
-        period=1.0,
+        period=3.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
                     os.path.join(launch_nav, "nav_start.py")
                 ),
-                condition=IfCondition(PythonExpression(['"', nav, '" == "true"'])),
+                condition=IfCondition(PythonExpression(nav)),
                 launch_arguments=[
                     ("namespace", namespace),
                     ("log_level", log_level),
@@ -128,13 +124,13 @@ def generate_launch_description():
     )
 
     decision_launch = TimerAction(
-        period=3.0,
+        period=6.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
-                    os.path.join(launch_decision, "decision_tree.py")
+                    os.path.join(launch_decision, "decision_tree.launch.py")
                 ),
-                condition=IfCondition(PythonExpression(['"', decision, '" == "true"'])),
+                condition=IfCondition(PythonExpression(decision)),
                 launch_arguments=[
                     ("namespace", namespace),
                     ("log_level", log_level),

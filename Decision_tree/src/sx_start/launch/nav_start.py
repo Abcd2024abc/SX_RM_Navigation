@@ -11,7 +11,6 @@ from launch.substitutions import LaunchConfiguration, PythonExpression
 
 def generate_launch_description():
     launch_nav = os.path.join(get_package_share_directory("nav_bringup"), "launch")
-    launch_gazebo = os.path.join(get_package_share_directory("rmu_gazebo_simulator"), "launch")
     config_dir = os.path.join(get_package_share_directory("sx_start"), "config")
     param_file = os.path.join(config_dir, "nav_start_data.yaml")
 
@@ -23,7 +22,6 @@ def generate_launch_description():
     world_default = str(param_data.get("world"))
     namespace_default = str(param_data.get("namespace"))
     slam_default = str(param_data.get("slam"))
-    use_robot_state_pub_default = str(param_data.get("use_robot_state_pub"))
     use_rviz_default = str(param_data.get("use_rviz"))
     model_default = str(param_data.get("model"))
 
@@ -31,7 +29,6 @@ def generate_launch_description():
     world = LaunchConfiguration("world")
     namespace = LaunchConfiguration("namespace")
     slam = LaunchConfiguration("slam")
-    use_robot_state_pub = LaunchConfiguration("use_robot_state_pub")
     use_rviz = LaunchConfiguration("use_rviz")
 
     # 声明参数文件
@@ -80,13 +77,6 @@ def generate_launch_description():
         ],
     )
 
-    gazebo_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(launch_gazebo, "bringup_sim.launch.py")
-        ),
-        condition=IfCondition(model),
-    )
-
     # reality
     reality_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -97,7 +87,6 @@ def generate_launch_description():
             ("world", world),
             ("namespace", namespace),
             ("slam", slam),
-            ("use_robot_state_pub", use_robot_state_pub),
             ("use_rviz", use_rviz),
         ],
     )
@@ -110,7 +99,6 @@ def generate_launch_description():
     ld.add_action(declare_slam_cmd)
     ld.add_action(declare_use_rviz_cmd)
 
-    ld.add_action(gazebo_launch)
     ld.add_action(simulation_launch)
     ld.add_action(reality_launch)
     return ld

@@ -18,7 +18,7 @@ ament_auto_add_library(${PROJECT_NAME} SHARED
 )
 
 rclcpp_components_register_node(${PROJECT_NAME}
-  PLUGIN decision_tree::DecisionTreeNode
+  PLUGIN decision_tree::DecisionTree
   EXECUTABLE decision_tree_node
 )
 

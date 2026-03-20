@@ -4,7 +4,7 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <chrono>
 
-namespace decision
+namespace decision_tree
 {
 DecisionTree::DecisionTree(const rclcpp::NodeOptions& options) : Node("decision_tree", options)
 {
@@ -909,7 +909,7 @@ std::string DecisionTree::state_to_string(DecisionState state) const
   }
 }
 
-}  // namespace decision
+}  // namespace decision_tree
 
 #include "rclcpp_components/register_node_macro.hpp"
-RCLCPP_COMPONENTS_REGISTER_NODE(decision::DecisionTree)
+RCLCPP_COMPONENTS_REGISTER_NODE(decision_tree::DecisionTree)
