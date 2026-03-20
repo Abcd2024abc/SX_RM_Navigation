@@ -1,0 +1,82 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_auto: 1.3.13 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/lin/SX_RM_Navigation/Path_Navigation/src/map_cost_extend/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Added test 'clang_format' to check C / C++ code style
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend
+[ 25%] [32mBuilding CXX object CMakeFiles/pb_back_up_frees_space_behavior.dir/src/behaviors/back_up_free_space.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libpb_back_up_frees_space_behavior.so[0m
+[ 50%] Built target pb_back_up_frees_space_behavior
+[ 75%] [32mBuilding CXX object CMakeFiles/layers.dir/src/layers/intensity_voxel_layer.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library liblayers.so[0m
+[100%] Built target layers
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend//behavior_plugin.xml
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend//costmap_plugins.xml
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/include/map_cost_extend/behaviors/back_up_free_space.hpp
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/include/map_cost_extend/layers/intensity_voxel_layer.hpp
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/environment/library_path.sh
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/environment/library_path.dsv
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib/libpb_back_up_frees_space_behavior.so
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib/liblayers.so
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/ament_index/resource_index/package_run_dependencies/map_cost_extend
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/ament_index/resource_index/parent_prefix_path/map_cost_extend
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/environment/ament_prefix_path.sh
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/environment/path.sh
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/environment/path.dsv
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/local_setup.bash
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/local_setup.sh
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/local_setup.zsh
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/local_setup.dsv
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.dsv
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/ament_index/resource_index/packages/map_cost_extend
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/ament_index/resource_index/nav2_core__pluginlib__plugin/map_cost_extend
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/ament_index/resource_index/nav2_costmap_2d__pluginlib__plugin/map_cost_extend
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/cmake/map_cost_extendConfig.cmake
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/cmake/map_cost_extendConfig-version.cmake
+-- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.xml

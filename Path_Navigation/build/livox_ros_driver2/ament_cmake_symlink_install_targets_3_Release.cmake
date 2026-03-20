@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2/livox_ros_driver2_node" "TARGETS" "livox_ros_driver2_node" "DESTINATION" "lib/livox_ros_driver2")

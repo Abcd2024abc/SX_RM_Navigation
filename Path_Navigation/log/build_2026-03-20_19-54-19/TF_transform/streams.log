@@ -1,0 +1,26 @@
+[0.023s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform -- -j32 -l32
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target TF_transform[0m
+[0.063s] [ 50%] [32mBuilding CXX object CMakeFiles/TF_transform.dir/src/TF_transform.cpp.o[0m
+[2.356s] [100%] [32m[1mLinking CXX executable TF_transform[0m
+[2.422s] [100%] Built target TF_transform
+[2.428s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform -- -j32 -l32
+[2.430s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform
+[2.435s] -- Install configuration: "Release"
+[2.435s] -- Execute custom install script
+[2.435s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib/TF_transform/TF_transform
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/ament_index/resource_index/package_run_dependencies/TF_transform
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/ament_index/resource_index/parent_prefix_path/TF_transform
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/environment/ament_prefix_path.sh
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/environment/ament_prefix_path.dsv
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/environment/path.sh
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/environment/path.dsv
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/local_setup.bash
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/local_setup.sh
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/local_setup.zsh
+[2.436s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/local_setup.dsv
+[2.437s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.dsv
+[2.445s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/ament_index/resource_index/packages/TF_transform
+[2.445s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/cmake/TF_transformConfig.cmake
+[2.445s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/cmake/TF_transformConfig-version.cmake
+[2.445s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.xml
+[2.446s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform

@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend/ament_cmake_core/map_cost_extendConfig-version.cmake

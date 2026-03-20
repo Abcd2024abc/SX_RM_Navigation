@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/src/point_lio/launch/point_lio.launch.py

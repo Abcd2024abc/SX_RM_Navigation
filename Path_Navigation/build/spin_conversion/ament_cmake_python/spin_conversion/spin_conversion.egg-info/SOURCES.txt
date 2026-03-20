@@ -1,0 +1,8 @@
+setup.py
+spin_conversion/__init__.py
+spin_conversion.egg-info/PKG-INFO
+spin_conversion.egg-info/SOURCES.txt
+spin_conversion.egg-info/dependency_links.txt
+spin_conversion.egg-info/top_level.txt
+spin_conversion/msg/__init__.py
+spin_conversion/msg/_spin_command.py

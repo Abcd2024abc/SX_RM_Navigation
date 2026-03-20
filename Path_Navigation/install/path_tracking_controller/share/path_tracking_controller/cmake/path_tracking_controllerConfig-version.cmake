@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller/ament_cmake_core/path_tracking_controllerConfig-version.cmake

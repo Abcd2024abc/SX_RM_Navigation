@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup/ament_cmake_core/nav_bringupConfig.cmake

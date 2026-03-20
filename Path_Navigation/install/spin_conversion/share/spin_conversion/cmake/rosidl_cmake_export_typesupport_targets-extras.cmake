@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

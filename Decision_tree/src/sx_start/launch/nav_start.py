@@ -60,11 +60,6 @@ def generate_launch_description():
         default_value=slam_default,
         description="是否使用SLAM."
     )
-    declare_use_robot_state_pub_cmd = DeclareLaunchArgument(
-        "use_robot_state_pub",
-        default_value=use_robot_state_pub_default,
-        description="是否使用静态TF."
-    )
     declare_use_rviz_cmd = DeclareLaunchArgument(
         "use_rviz",
         default_value=use_rviz_default,
@@ -113,7 +108,6 @@ def generate_launch_description():
     ld.add_action(declare_world_cmd)
     ld.add_action(declare_namespace_cmd)
     ld.add_action(declare_slam_cmd)
-    ld.add_action(declare_use_robot_state_pub_cmd)
     ld.add_action(declare_use_rviz_cmd)
 
     ld.add_action(gazebo_launch)

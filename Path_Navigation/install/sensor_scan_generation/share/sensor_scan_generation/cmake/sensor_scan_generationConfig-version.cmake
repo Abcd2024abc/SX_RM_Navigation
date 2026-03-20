@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation/ament_cmake_core/sensor_scan_generationConfig-version.cmake

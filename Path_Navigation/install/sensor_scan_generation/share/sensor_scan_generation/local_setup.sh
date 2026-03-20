@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation/ament_cmake_environment_hooks/local_setup.sh

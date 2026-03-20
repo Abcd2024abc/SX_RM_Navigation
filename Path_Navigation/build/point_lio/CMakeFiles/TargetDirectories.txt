@@ -1,0 +1,10 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/uninstall.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/point_lio_uninstall.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/pointlio_mapping.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/test.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/edit_cache.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/rebuild_cache.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/list_install_components.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/install.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/install/local.dir
+/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio/CMakeFiles/install/strip.dir

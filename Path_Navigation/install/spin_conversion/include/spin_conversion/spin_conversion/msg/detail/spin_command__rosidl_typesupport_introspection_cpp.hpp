@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_typesupport_introspection_cpp/spin_conversion/msg/detail/spin_command__rosidl_typesupport_introspection_cpp.hpp

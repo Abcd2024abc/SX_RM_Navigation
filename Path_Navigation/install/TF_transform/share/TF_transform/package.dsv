@@ -1,0 +1,8 @@
+source;share/TF_transform/hook/cmake_prefix_path.ps1
+source;share/TF_transform/hook/cmake_prefix_path.dsv
+source;share/TF_transform/hook/cmake_prefix_path.sh
+source;share/TF_transform/local_setup.bash
+source;share/TF_transform/local_setup.dsv
+source;share/TF_transform/local_setup.ps1
+source;share/TF_transform/local_setup.sh
+source;share/TF_transform/local_setup.zsh

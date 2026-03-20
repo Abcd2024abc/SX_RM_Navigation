@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool/ament_cmake_environment_hooks/local_setup.sh

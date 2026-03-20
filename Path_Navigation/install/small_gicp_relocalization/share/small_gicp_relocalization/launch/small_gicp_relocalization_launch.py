@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/src/small_gicp_relocalization/launch/small_gicp_relocalization_launch.py

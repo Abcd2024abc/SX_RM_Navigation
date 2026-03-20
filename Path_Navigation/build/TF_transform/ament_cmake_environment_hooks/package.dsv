@@ -1,0 +1,4 @@
+source;share/TF_transform/local_setup.bash
+source;share/TF_transform/local_setup.dsv
+source;share/TF_transform/local_setup.sh
+source;share/TF_transform/local_setup.zsh

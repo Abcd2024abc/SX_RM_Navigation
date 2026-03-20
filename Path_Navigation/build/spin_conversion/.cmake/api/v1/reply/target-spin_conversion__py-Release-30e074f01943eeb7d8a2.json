@@ -1,0 +1,79 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/spin_conversion__py/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "spin_conversion::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "spin_conversion__py::@b2ad6e55aaf98f15b403",
+	"name" : "spin_conversion__py",
+	"paths" : 
+	{
+		"build" : "spin_conversion__py",
+		"source" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/spin_conversion__py"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/spin_conversion__py/CMakeFiles/spin_conversion__py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/spin_conversion__py/CMakeFiles/spin_conversion__py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_generator_py/spin_conversion/_spin_conversion_s.ep.rosidl_typesupport_fastrtps_c.c.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

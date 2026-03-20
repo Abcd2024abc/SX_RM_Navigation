@@ -1,0 +1,3 @@
+source;share/map_cost_extend/environment/ament_prefix_path.sh
+source;share/map_cost_extend/environment/library_path.sh
+source;share/map_cost_extend/environment/path.sh

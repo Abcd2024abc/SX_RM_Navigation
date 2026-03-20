@@ -1,0 +1,1043 @@
+[0.045s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release']
+[0.045s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=Release'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x76c105be7fd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76c105be7ac0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76c105be7ac0>>)
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.113s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lin/SX_RM_Navigation/Path_Navigation'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/TF_transform) by extension 'ros'
+[0.120s] DEBUG:colcon.colcon_core.package_identification:Package 'src/TF_transform' with type 'ros.ament_cmake' and name 'TF_transform'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/ign_sim_pointcloud_tool) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ign_sim_pointcloud_tool' with type 'ros.ament_cmake' and name 'ign_sim_pointcloud_tool'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_ros_driver2' with type 'ros.ament_cmake' and name 'livox_ros_driver2'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/loam_interface) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'src/loam_interface' with type 'ros.ament_cmake' and name 'loam_interface'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/map_cost_extend) by extension 'ros'
+[0.123s] DEBUG:colcon.colcon_core.package_identification:Package 'src/map_cost_extend' with type 'ros.ament_cmake' and name 'map_cost_extend'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extension 'ignore_ament_install'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extensions ['colcon_pkg']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extension 'colcon_pkg'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extensions ['colcon_meta']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extension 'colcon_meta'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extensions ['ros']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_bringup) by extension 'ros'
+[0.124s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav_bringup' with type 'ros.ament_cmake' and name 'nav_bringup'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extension 'ignore_ament_install'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extensions ['colcon_pkg']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extension 'colcon_pkg'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extensions ['colcon_meta']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extension 'colcon_meta'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extensions ['ros']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_tracking_controller) by extension 'ros'
+[0.124s] DEBUG:colcon.colcon_core.package_identification:Package 'src/path_tracking_controller' with type 'ros.ament_cmake' and name 'path_tracking_controller'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extension 'ignore'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extension 'ignore_ament_install'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extensions ['colcon_pkg']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extension 'colcon_pkg'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extensions ['colcon_meta']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extension 'colcon_meta'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extensions ['ros']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/point_lio) by extension 'ros'
+[0.125s] DEBUG:colcon.colcon_core.package_identification:Package 'src/point_lio' with type 'ros.ament_cmake' and name 'point_lio'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_pkg'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_meta']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_meta'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ros']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ros'
+[0.126s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pointcloud_to_laserscan' with type 'ros.ament_cmake' and name 'pointcloud_to_laserscan'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extensions ['ignore', 'ignore_ament_install']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extension 'ignore'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extension 'ignore_ament_install'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extensions ['colcon_pkg']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extension 'colcon_pkg'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extensions ['colcon_meta']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extension 'colcon_meta'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extensions ['ros']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_scan_generation) by extension 'ros'
+[0.127s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sensor_scan_generation' with type 'ros.ament_cmake' and name 'sensor_scan_generation'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extensions ['ignore', 'ignore_ament_install']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extension 'ignore'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extension 'ignore_ament_install'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extensions ['colcon_pkg']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extension 'colcon_pkg'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extensions ['colcon_meta']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extension 'colcon_meta'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extensions ['ros']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/small_gicp_relocalization) by extension 'ros'
+[0.127s] DEBUG:colcon.colcon_core.package_identification:Package 'src/small_gicp_relocalization' with type 'ros.ament_cmake' and name 'small_gicp_relocalization'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extensions ['ignore', 'ignore_ament_install']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extension 'ignore'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extension 'ignore_ament_install'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extensions ['colcon_pkg']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extension 'colcon_pkg'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extensions ['colcon_meta']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extension 'colcon_meta'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extensions ['ros']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/spin_conversion) by extension 'ros'
+[0.128s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spin_conversion' with type 'ros.ament_cmake' and name 'spin_conversion'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extension 'ignore_ament_install'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extensions ['colcon_pkg']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extension 'colcon_pkg'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extensions ['colcon_meta']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extension 'colcon_meta'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extensions ['ros']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis) by extension 'ros'
+[0.129s] DEBUG:colcon.colcon_core.package_identification:Package 'src/terrain_analysis' with type 'ros.ament_cmake' and name 'terrain_analysis'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extensions ['ignore', 'ignore_ament_install']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extension 'ignore'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extension 'ignore_ament_install'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extensions ['colcon_pkg']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extension 'colcon_pkg'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extensions ['colcon_meta']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extension 'colcon_meta'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extensions ['ros']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/terrain_analysis_ext) by extension 'ros'
+[0.129s] DEBUG:colcon.colcon_core.package_identification:Package 'src/terrain_analysis_ext' with type 'ros.ament_cmake' and name 'terrain_analysis_ext'
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.147s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 15 installed packages in /home/lin/SX_RM_Navigation/Path_Navigation/install
+[0.147s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 335 installed packages in /opt/ros/humble
+[0.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'cmake_target' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'cmake_clean_cache' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'cmake_clean_first' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'cmake_force_configure' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'ament_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'catkin_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'TF_transform' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.166s] DEBUG:colcon.colcon_core.verb:Building package 'TF_transform' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/TF_transform', 'symlink_install': True, 'test_result_base': None}
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'cmake_target' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'cmake_clean_cache' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'cmake_clean_first' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'cmake_force_configure' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'ament_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'catkin_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'ign_sim_pointcloud_tool' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.167s] DEBUG:colcon.colcon_core.verb:Building package 'ign_sim_pointcloud_tool' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/ign_sim_pointcloud_tool', 'symlink_install': True, 'test_result_base': None}
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_first' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_force_configure' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'ament_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.167s] DEBUG:colcon.colcon_core.verb:Building package 'livox_ros_driver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/livox_ros_driver2', 'symlink_install': True, 'test_result_base': None}
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'cmake_target' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'loam_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.167s] DEBUG:colcon.colcon_core.verb:Building package 'loam_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/loam_interface', 'symlink_install': True, 'test_result_base': None}
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'cmake_target' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'cmake_clean_cache' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'cmake_clean_first' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'cmake_force_configure' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'ament_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'catkin_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'map_cost_extend' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.167s] DEBUG:colcon.colcon_core.verb:Building package 'map_cost_extend' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/map_cost_extend', 'symlink_install': True, 'test_result_base': None}
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'cmake_target' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.167s] Level 5:colcon.colcon_core.verb:set package 'path_tracking_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.167s] DEBUG:colcon.colcon_core.verb:Building package 'path_tracking_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/path_tracking_controller', 'symlink_install': True, 'test_result_base': None}
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_cache' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_first' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_force_configure' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'ament_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.168s] DEBUG:colcon.colcon_core.verb:Building package 'pointcloud_to_laserscan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/pointcloud_to_laserscan', 'symlink_install': True, 'test_result_base': None}
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'cmake_target' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'cmake_clean_first' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'cmake_force_configure' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'ament_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'sensor_scan_generation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.168s] DEBUG:colcon.colcon_core.verb:Building package 'sensor_scan_generation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/sensor_scan_generation', 'symlink_install': True, 'test_result_base': None}
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'cmake_target' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'cmake_clean_first' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'cmake_force_configure' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'ament_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'small_gicp_relocalization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.168s] DEBUG:colcon.colcon_core.verb:Building package 'small_gicp_relocalization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/small_gicp_relocalization', 'symlink_install': True, 'test_result_base': None}
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'cmake_target' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'cmake_clean_cache' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'cmake_clean_first' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'cmake_force_configure' from command line to 'False'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'ament_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'catkin_cmake_args' from command line to 'None'
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'spin_conversion' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.168s] DEBUG:colcon.colcon_core.verb:Building package 'spin_conversion' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/spin_conversion', 'symlink_install': True, 'test_result_base': None}
+[0.168s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'cmake_target' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'cmake_clean_cache' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'cmake_clean_first' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'cmake_force_configure' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'ament_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'catkin_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.169s] DEBUG:colcon.colcon_core.verb:Building package 'terrain_analysis' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/terrain_analysis', 'symlink_install': True, 'test_result_base': None}
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'cmake_target' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'cmake_clean_cache' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'cmake_clean_first' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'cmake_force_configure' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'ament_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'catkin_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'terrain_analysis_ext' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.169s] DEBUG:colcon.colcon_core.verb:Building package 'terrain_analysis_ext' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/terrain_analysis_ext', 'symlink_install': True, 'test_result_base': None}
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'cmake_target' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'cmake_clean_cache' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'cmake_clean_first' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'cmake_force_configure' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'ament_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'catkin_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'point_lio' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.169s] DEBUG:colcon.colcon_core.verb:Building package 'point_lio' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/point_lio', 'symlink_install': True, 'test_result_base': None}
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'cmake_target' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.169s] Level 5:colcon.colcon_core.verb:set package 'nav_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.169s] DEBUG:colcon.colcon_core.verb:Building package 'nav_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup', 'merge_install': False, 'path': '/home/lin/SX_RM_Navigation/Path_Navigation/src/nav_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.169s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.170s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.170s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/livox_ros_driver2' with build type 'ament_cmake'
+[0.170s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/livox_ros_driver2'
+[0.171s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.172s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.172s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.173s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/path_tracking_controller' with build type 'ament_cmake'
+[0.173s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/path_tracking_controller'
+[0.174s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.174s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.175s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/pointcloud_to_laserscan' with build type 'ament_cmake'
+[0.175s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/pointcloud_to_laserscan'
+[0.175s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.175s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.177s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/small_gicp_relocalization' with build type 'ament_cmake'
+[0.177s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/small_gicp_relocalization'
+[0.177s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.177s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.179s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/terrain_analysis' with build type 'ament_cmake'
+[0.179s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/terrain_analysis'
+[0.179s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.179s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.181s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/terrain_analysis_ext' with build type 'ament_cmake'
+[0.181s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/terrain_analysis_ext'
+[0.181s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.181s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.183s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/TF_transform' with build type 'ament_cmake'
+[0.183s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/TF_transform'
+[0.183s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.183s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.184s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/ign_sim_pointcloud_tool' with build type 'ament_cmake'
+[0.185s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/ign_sim_pointcloud_tool'
+[0.185s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.185s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.186s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/loam_interface' with build type 'ament_cmake'
+[0.186s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/loam_interface'
+[0.186s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.186s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.188s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/map_cost_extend' with build type 'ament_cmake'
+[0.188s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/map_cost_extend'
+[0.188s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.188s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.190s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/sensor_scan_generation' with build type 'ament_cmake'
+[0.190s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/sensor_scan_generation'
+[0.190s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.190s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.192s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/spin_conversion' with build type 'ament_cmake'
+[0.192s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/spin_conversion'
+[0.192s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.192s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2 -- -j32 -l32
+[0.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller -- -j32 -l32
+[0.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan -- -j32 -l32
+[0.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization -- -j32 -l32
+[0.202s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis -- -j32 -l32
+[0.204s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext -- -j32 -l32
+[0.206s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform -- -j32 -l32
+[0.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool -- -j32 -l32
+[0.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface -- -j32 -l32
+[0.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend -- -j32 -l32
+[0.217s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation -- -j32 -l32
+[0.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion -- -j32 -l32
+[0.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller -- -j32 -l32
+[0.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller
+[0.264s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext -- -j32 -l32
+[0.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext
+[0.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization -- -j32 -l32
+[0.272s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization
+[0.276s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis -- -j32 -l32
+[0.277s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis
+[0.280s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool -- -j32 -l32
+[0.283s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(path_tracking_controller)
+[0.289s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool
+[0.291s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller' for CMake module files
+[0.291s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation -- -j32 -l32
+[0.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation
+[0.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface -- -j32 -l32
+[0.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface
+[0.294s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller' for CMake config files
+[0.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller
+[0.297s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_tracking_controller', 'cmake_prefix_path')
+[0.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/cmake_prefix_path.ps1'
+[0.298s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/cmake_prefix_path.dsv'
+[0.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/cmake_prefix_path.sh'
+[0.299s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib'
+[0.299s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_tracking_controller', 'ld_library_path_lib')
+[0.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/ld_library_path_lib.ps1'
+[0.299s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/ld_library_path_lib.dsv'
+[0.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/ld_library_path_lib.sh'
+[0.300s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/bin'
+[0.300s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib/pkgconfig/path_tracking_controller.pc'
+[0.300s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib/python3.10/site-packages'
+[0.300s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/bin'
+[0.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.ps1'
+[0.301s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.dsv'
+[0.301s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.sh'
+[0.301s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.bash'
+[0.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.zsh'
+[0.302s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/colcon-core/packages/path_tracking_controller)
+[0.302s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(path_tracking_controller)
+[0.302s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller' for CMake module files
+[0.303s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller' for CMake config files
+[0.303s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_tracking_controller', 'cmake_prefix_path')
+[0.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/cmake_prefix_path.ps1'
+[0.303s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/cmake_prefix_path.dsv'
+[0.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/cmake_prefix_path.sh'
+[0.304s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib'
+[0.304s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_tracking_controller', 'ld_library_path_lib')
+[0.304s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/ld_library_path_lib.ps1'
+[0.304s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/ld_library_path_lib.dsv'
+[0.304s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/hook/ld_library_path_lib.sh'
+[0.304s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/bin'
+[0.304s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib/pkgconfig/path_tracking_controller.pc'
+[0.304s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib/python3.10/site-packages'
+[0.305s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/bin'
+[0.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.ps1'
+[0.305s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.dsv'
+[0.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.sh'
+[0.306s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.bash'
+[0.306s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.zsh'
+[0.306s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/colcon-core/packages/path_tracking_controller)
+[0.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend -- -j32 -l32
+[0.309s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend
+[0.309s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(terrain_analysis_ext)
+[0.309s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext' for CMake module files
+[0.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis_ext
+[0.310s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext' for CMake config files
+[0.310s] Level 1:colcon.colcon_core.shell:create_environment_hook('terrain_analysis_ext', 'cmake_prefix_path')
+[0.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/hook/cmake_prefix_path.ps1'
+[0.310s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/hook/cmake_prefix_path.dsv'
+[0.311s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/hook/cmake_prefix_path.sh'
+[0.311s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/lib'
+[0.311s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/bin'
+[0.311s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/lib/pkgconfig/terrain_analysis_ext.pc'
+[0.311s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/lib/python3.10/site-packages'
+[0.311s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/bin'
+[0.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.ps1'
+[0.312s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.dsv'
+[0.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.sh'
+[0.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.bash'
+[0.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.zsh'
+[0.312s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/colcon-core/packages/terrain_analysis_ext)
+[0.313s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(terrain_analysis_ext)
+[0.313s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext' for CMake module files
+[0.313s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext' for CMake config files
+[0.313s] Level 1:colcon.colcon_core.shell:create_environment_hook('terrain_analysis_ext', 'cmake_prefix_path')
+[0.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/hook/cmake_prefix_path.ps1'
+[0.314s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/hook/cmake_prefix_path.dsv'
+[0.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/hook/cmake_prefix_path.sh'
+[0.314s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/lib'
+[0.314s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/bin'
+[0.314s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/lib/pkgconfig/terrain_analysis_ext.pc'
+[0.315s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/lib/python3.10/site-packages'
+[0.315s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/bin'
+[0.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.ps1'
+[0.315s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.dsv'
+[0.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.sh'
+[0.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.bash'
+[0.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/terrain_analysis_ext/package.zsh'
+[0.317s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext/share/colcon-core/packages/terrain_analysis_ext)
+[0.319s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan -- -j32 -l32
+[0.320s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_gicp_relocalization)
+[0.320s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization' for CMake module files
+[0.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan
+[0.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization
+[0.323s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization' for CMake config files
+[0.324s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_gicp_relocalization', 'cmake_prefix_path')
+[0.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/cmake_prefix_path.ps1'
+[0.324s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/cmake_prefix_path.dsv'
+[0.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/cmake_prefix_path.sh'
+[0.325s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib'
+[0.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_gicp_relocalization', 'ld_library_path_lib')
+[0.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/ld_library_path_lib.ps1'
+[0.326s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/ld_library_path_lib.dsv'
+[0.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/ld_library_path_lib.sh'
+[0.326s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/bin'
+[0.326s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib/pkgconfig/small_gicp_relocalization.pc'
+[0.327s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib/python3.10/site-packages'
+[0.327s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/bin'
+[0.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.ps1'
+[0.328s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.dsv'
+[0.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.sh'
+[0.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.bash'
+[0.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.zsh'
+[0.329s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/colcon-core/packages/small_gicp_relocalization)
+[0.330s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_gicp_relocalization)
+[0.330s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization' for CMake module files
+[0.331s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization' for CMake config files
+[0.331s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_gicp_relocalization', 'cmake_prefix_path')
+[0.331s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/cmake_prefix_path.ps1'
+[0.332s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/cmake_prefix_path.dsv'
+[0.332s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/cmake_prefix_path.sh'
+[0.333s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib'
+[0.333s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_gicp_relocalization', 'ld_library_path_lib')
+[0.333s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/ld_library_path_lib.ps1'
+[0.333s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/ld_library_path_lib.dsv'
+[0.333s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/hook/ld_library_path_lib.sh'
+[0.334s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/bin'
+[0.334s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib/pkgconfig/small_gicp_relocalization.pc'
+[0.334s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib/python3.10/site-packages'
+[0.334s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/bin'
+[0.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.ps1'
+[0.334s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.dsv'
+[0.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.sh'
+[0.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.bash'
+[0.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/small_gicp_relocalization/package.zsh'
+[0.335s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/share/colcon-core/packages/small_gicp_relocalization)
+[0.335s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_sim_pointcloud_tool)
+[0.336s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool' for CMake module files
+[0.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool
+[0.336s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool' for CMake config files
+[0.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_sim_pointcloud_tool', 'cmake_prefix_path')
+[0.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/cmake_prefix_path.ps1'
+[0.337s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/cmake_prefix_path.dsv'
+[0.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/cmake_prefix_path.sh'
+[0.337s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib'
+[0.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_sim_pointcloud_tool', 'ld_library_path_lib')
+[0.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/ld_library_path_lib.ps1'
+[0.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/ld_library_path_lib.dsv'
+[0.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/ld_library_path_lib.sh'
+[0.338s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/bin'
+[0.338s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib/pkgconfig/ign_sim_pointcloud_tool.pc'
+[0.338s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib/python3.10/site-packages'
+[0.338s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/bin'
+[0.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.ps1'
+[0.339s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.dsv'
+[0.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.sh'
+[0.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.bash'
+[0.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.zsh'
+[0.340s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/colcon-core/packages/ign_sim_pointcloud_tool)
+[0.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_sim_pointcloud_tool)
+[0.340s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool' for CMake module files
+[0.340s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool' for CMake config files
+[0.340s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_sim_pointcloud_tool', 'cmake_prefix_path')
+[0.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/cmake_prefix_path.ps1'
+[0.341s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/cmake_prefix_path.dsv'
+[0.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/cmake_prefix_path.sh'
+[0.341s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib'
+[0.341s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_sim_pointcloud_tool', 'ld_library_path_lib')
+[0.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/ld_library_path_lib.ps1'
+[0.341s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/ld_library_path_lib.dsv'
+[0.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/hook/ld_library_path_lib.sh'
+[0.342s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/bin'
+[0.342s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib/pkgconfig/ign_sim_pointcloud_tool.pc'
+[0.342s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib/python3.10/site-packages'
+[0.342s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/bin'
+[0.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.ps1'
+[0.342s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.dsv'
+[0.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.sh'
+[0.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.bash'
+[0.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.zsh'
+[0.343s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/colcon-core/packages/ign_sim_pointcloud_tool)
+[0.343s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensor_scan_generation)
+[0.343s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation' for CMake module files
+[0.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/sensor_scan_generation
+[0.344s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation' for CMake config files
+[0.344s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_scan_generation', 'cmake_prefix_path')
+[0.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/cmake_prefix_path.ps1'
+[0.345s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/cmake_prefix_path.dsv'
+[0.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/cmake_prefix_path.sh'
+[0.345s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib'
+[0.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_scan_generation', 'ld_library_path_lib')
+[0.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/ld_library_path_lib.ps1'
+[0.345s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/ld_library_path_lib.dsv'
+[0.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/ld_library_path_lib.sh'
+[0.346s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/bin'
+[0.346s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib/pkgconfig/sensor_scan_generation.pc'
+[0.346s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib/python3.10/site-packages'
+[0.346s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/bin'
+[0.346s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.ps1'
+[0.347s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.dsv'
+[0.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.sh'
+[0.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.bash'
+[0.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.zsh'
+[0.347s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/colcon-core/packages/sensor_scan_generation)
+[0.348s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensor_scan_generation)
+[0.348s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation' for CMake module files
+[0.348s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation' for CMake config files
+[0.348s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_scan_generation', 'cmake_prefix_path')
+[0.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/cmake_prefix_path.ps1'
+[0.348s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/cmake_prefix_path.dsv'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/cmake_prefix_path.sh'
+[0.349s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib'
+[0.349s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_scan_generation', 'ld_library_path_lib')
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/ld_library_path_lib.ps1'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/ld_library_path_lib.dsv'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/hook/ld_library_path_lib.sh'
+[0.349s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/bin'
+[0.349s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib/pkgconfig/sensor_scan_generation.pc'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib/python3.10/site-packages'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/bin'
+[0.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.ps1'
+[0.350s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.dsv'
+[0.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.sh'
+[0.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.bash'
+[0.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/sensor_scan_generation/package.zsh'
+[0.351s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/share/colcon-core/packages/sensor_scan_generation)
+[0.351s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(terrain_analysis)
+[0.351s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis' for CMake module files
+[0.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/terrain_analysis
+[0.352s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis' for CMake config files
+[0.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('terrain_analysis', 'cmake_prefix_path')
+[0.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/hook/cmake_prefix_path.ps1'
+[0.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/hook/cmake_prefix_path.dsv'
+[0.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/hook/cmake_prefix_path.sh'
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/lib'
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/bin'
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/lib/pkgconfig/terrain_analysis.pc'
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/lib/python3.10/site-packages'
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/bin'
+[0.353s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.ps1'
+[0.353s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.dsv'
+[0.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.sh'
+[0.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.bash'
+[0.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.zsh'
+[0.354s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/colcon-core/packages/terrain_analysis)
+[0.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(terrain_analysis)
+[0.354s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis' for CMake module files
+[0.355s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis' for CMake config files
+[0.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('terrain_analysis', 'cmake_prefix_path')
+[0.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/hook/cmake_prefix_path.ps1'
+[0.355s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/hook/cmake_prefix_path.dsv'
+[0.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/hook/cmake_prefix_path.sh'
+[0.355s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/lib'
+[0.355s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/bin'
+[0.355s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/lib/pkgconfig/terrain_analysis.pc'
+[0.356s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/lib/python3.10/site-packages'
+[0.356s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/bin'
+[0.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.ps1'
+[0.356s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.dsv'
+[0.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.sh'
+[0.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.bash'
+[0.357s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/terrain_analysis/package.zsh'
+[0.357s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis/share/colcon-core/packages/terrain_analysis)
+[0.357s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loam_interface)
+[0.357s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface' for CMake module files
+[0.357s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface' for CMake config files
+[0.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface
+[0.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('loam_interface', 'cmake_prefix_path')
+[0.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/cmake_prefix_path.ps1'
+[0.358s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/cmake_prefix_path.dsv'
+[0.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/cmake_prefix_path.sh'
+[0.359s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib'
+[0.359s] Level 1:colcon.colcon_core.shell:create_environment_hook('loam_interface', 'ld_library_path_lib')
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/ld_library_path_lib.ps1'
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/ld_library_path_lib.dsv'
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/ld_library_path_lib.sh'
+[0.359s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/bin'
+[0.359s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib/pkgconfig/loam_interface.pc'
+[0.359s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib/python3.10/site-packages'
+[0.360s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/bin'
+[0.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.ps1'
+[0.360s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.dsv'
+[0.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.sh'
+[0.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.bash'
+[0.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.zsh'
+[0.361s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/colcon-core/packages/loam_interface)
+[0.361s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loam_interface)
+[0.361s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface' for CMake module files
+[0.361s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface' for CMake config files
+[0.361s] Level 1:colcon.colcon_core.shell:create_environment_hook('loam_interface', 'cmake_prefix_path')
+[0.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/cmake_prefix_path.ps1'
+[0.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/cmake_prefix_path.dsv'
+[0.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/cmake_prefix_path.sh'
+[0.362s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib'
+[0.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('loam_interface', 'ld_library_path_lib')
+[0.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/ld_library_path_lib.ps1'
+[0.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/ld_library_path_lib.dsv'
+[0.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/hook/ld_library_path_lib.sh'
+[0.363s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/bin'
+[0.363s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib/pkgconfig/loam_interface.pc'
+[0.363s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib/python3.10/site-packages'
+[0.363s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/bin'
+[0.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.ps1'
+[0.363s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.dsv'
+[0.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.sh'
+[0.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.bash'
+[0.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/loam_interface/package.zsh'
+[0.364s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/share/colcon-core/packages/loam_interface)
+[0.366s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(map_cost_extend)
+[0.367s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend' for CMake module files
+[0.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend
+[0.368s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend' for CMake config files
+[0.369s] Level 1:colcon.colcon_core.shell:create_environment_hook('map_cost_extend', 'cmake_prefix_path')
+[0.369s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/cmake_prefix_path.ps1'
+[0.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/cmake_prefix_path.dsv'
+[0.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/cmake_prefix_path.sh'
+[0.370s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib'
+[0.370s] Level 1:colcon.colcon_core.shell:create_environment_hook('map_cost_extend', 'ld_library_path_lib')
+[0.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/ld_library_path_lib.ps1'
+[0.371s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/ld_library_path_lib.dsv'
+[0.371s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/ld_library_path_lib.sh'
+[0.371s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/bin'
+[0.371s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib/pkgconfig/map_cost_extend.pc'
+[0.372s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib/python3.10/site-packages'
+[0.372s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/bin'
+[0.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.ps1'
+[0.373s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.dsv'
+[0.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.sh'
+[0.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.bash'
+[0.374s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.zsh'
+[0.374s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/colcon-core/packages/map_cost_extend)
+[0.374s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(map_cost_extend)
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend' for CMake module files
+[0.375s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend' for CMake config files
+[0.375s] Level 1:colcon.colcon_core.shell:create_environment_hook('map_cost_extend', 'cmake_prefix_path')
+[0.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/cmake_prefix_path.ps1'
+[0.376s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/cmake_prefix_path.dsv'
+[0.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/cmake_prefix_path.sh'
+[0.376s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib'
+[0.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('map_cost_extend', 'ld_library_path_lib')
+[0.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/ld_library_path_lib.ps1'
+[0.377s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/ld_library_path_lib.dsv'
+[0.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/hook/ld_library_path_lib.sh'
+[0.378s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/bin'
+[0.378s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib/pkgconfig/map_cost_extend.pc'
+[0.378s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib/python3.10/site-packages'
+[0.378s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/bin'
+[0.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.ps1'
+[0.379s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.dsv'
+[0.379s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.sh'
+[0.379s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.bash'
+[0.380s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/map_cost_extend/package.zsh'
+[0.380s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/share/colcon-core/packages/map_cost_extend)
+[0.380s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[0.381s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan' for CMake module files
+[0.381s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/pointcloud_to_laserscan
+[0.382s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan' for CMake config files
+[0.382s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[0.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[0.383s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib'
+[0.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[0.384s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/bin'
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/bin'
+[0.385s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[0.386s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[0.386s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[0.386s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[0.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[0.387s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[0.387s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[0.387s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan' for CMake module files
+[0.388s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan' for CMake config files
+[0.388s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[0.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[0.389s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[0.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[0.389s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib'
+[0.390s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[0.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[0.390s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[0.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/bin'
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/bin'
+[0.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[0.392s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[0.392s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[0.392s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[0.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[0.393s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[0.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion -- -j32 -l32
+[0.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion
+[0.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2 -- -j32 -l32
+[0.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2
+[0.470s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spin_conversion)
+[0.470s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion' for CMake module files
+[0.471s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion' for CMake config files
+[0.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion
+[0.472s] Level 1:colcon.colcon_core.shell:create_environment_hook('spin_conversion', 'cmake_prefix_path')
+[0.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/cmake_prefix_path.ps1'
+[0.472s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/cmake_prefix_path.dsv'
+[0.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/cmake_prefix_path.sh'
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib'
+[0.473s] Level 1:colcon.colcon_core.shell:create_environment_hook('spin_conversion', 'ld_library_path_lib')
+[0.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/ld_library_path_lib.ps1'
+[0.473s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/ld_library_path_lib.dsv'
+[0.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/ld_library_path_lib.sh'
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/bin'
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib/pkgconfig/spin_conversion.pc'
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib/python3.10/site-packages'
+[0.474s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/bin'
+[0.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.ps1'
+[0.474s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.dsv'
+[0.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.sh'
+[0.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.bash'
+[0.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.zsh'
+[0.474s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/colcon-core/packages/spin_conversion)
+[0.475s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spin_conversion)
+[0.475s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion' for CMake module files
+[0.475s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion' for CMake config files
+[0.476s] Level 1:colcon.colcon_core.shell:create_environment_hook('spin_conversion', 'cmake_prefix_path')
+[0.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/cmake_prefix_path.ps1'
+[0.476s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/cmake_prefix_path.dsv'
+[0.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/cmake_prefix_path.sh'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib'
+[0.476s] Level 1:colcon.colcon_core.shell:create_environment_hook('spin_conversion', 'ld_library_path_lib')
+[0.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/ld_library_path_lib.ps1'
+[0.477s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/ld_library_path_lib.dsv'
+[0.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/hook/ld_library_path_lib.sh'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/bin'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib/pkgconfig/spin_conversion.pc'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib/python3.10/site-packages'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/bin'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.ps1'
+[0.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.dsv'
+[0.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.sh'
+[0.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.bash'
+[0.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/spin_conversion/package.zsh'
+[0.478s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/share/colcon-core/packages/spin_conversion)
+[0.479s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2' for CMake module files
+[0.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2
+[0.481s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2' for CMake config files
+[0.482s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[0.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[0.482s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[0.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[0.483s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib'
+[0.483s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[0.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[0.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[0.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[0.484s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/bin'
+[0.484s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[0.484s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib/python3.10/site-packages'
+[0.484s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/bin'
+[0.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[0.485s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[0.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[0.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[0.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[0.486s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[0.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2' for CMake module files
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2' for CMake config files
+[0.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib'
+[0.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/bin'
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib/python3.10/site-packages'
+[0.490s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/bin'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[0.491s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[0.491s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/point_lio' with build type 'ament_cmake'
+[0.491s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/point_lio'
+[0.491s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.491s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.498s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio -- -j32 -l32
+[0.563s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio' returned '0': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio -- -j32 -l32
+[0.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio
+[0.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(point_lio)
+[0.578s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio' for CMake module files
+[0.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio' returned '0': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/point_lio
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio' for CMake config files
+[0.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('point_lio', 'cmake_prefix_path')
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/hook/cmake_prefix_path.ps1'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/hook/cmake_prefix_path.dsv'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/hook/cmake_prefix_path.sh'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/lib'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/bin'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/lib/pkgconfig/point_lio.pc'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/lib/python3.10/site-packages'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/bin'
+[0.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.ps1'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.dsv'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.sh'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.bash'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.zsh'
+[0.582s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/colcon-core/packages/point_lio)
+[0.583s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(point_lio)
+[0.583s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio' for CMake module files
+[0.583s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio' for CMake config files
+[0.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('point_lio', 'cmake_prefix_path')
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/hook/cmake_prefix_path.ps1'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/hook/cmake_prefix_path.dsv'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/hook/cmake_prefix_path.sh'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/lib'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/bin'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/lib/pkgconfig/point_lio.pc'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/lib/python3.10/site-packages'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/bin'
+[0.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.ps1'
+[0.584s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.dsv'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.sh'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.bash'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/point_lio/package.zsh'
+[0.585s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio/share/colcon-core/packages/point_lio)
+[0.585s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/nav_bringup' with build type 'ament_cmake'
+[0.586s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lin/SX_RM_Navigation/Path_Navigation/src/nav_bringup'
+[0.586s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.586s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.603s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup -- -j32 -l32
+[0.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup' returned '0': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup -- -j32 -l32
+[0.636s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup
+[0.654s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_bringup)
+[0.655s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup' for CMake module files
+[0.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup' returned '0': CMAKE_PREFIX_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/point_lio:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis_ext:/home/lin/SX_RM_Navigation/Path_Navigation/install/terrain_analysis:/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2:/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation:/home/lin/SX_RM_Navigation/Path_Navigation/install/robot_description:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool:/opt/ros/humble LD_LIBRARY_PATH=/home/lin/SX_RM_Navigation/Path_Navigation/install/small_gicp_relocalization/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/pointcloud_to_laserscan/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/livox_ros_driver2/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/spin_conversion/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/sensor_scan_generation/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/map_cost_extend/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/loam_interface/lib:/home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/nav_bringup
+[0.655s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup' for CMake config files
+[0.656s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_bringup', 'cmake_prefix_path')
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/hook/cmake_prefix_path.ps1'
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/hook/cmake_prefix_path.dsv'
+[0.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/hook/cmake_prefix_path.sh'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/bin'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/lib/pkgconfig/nav_bringup.pc'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/lib/python3.10/site-packages'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/bin'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.ps1'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.dsv'
+[0.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.sh'
+[0.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.bash'
+[0.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.zsh'
+[0.660s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/colcon-core/packages/nav_bringup)
+[0.660s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_bringup)
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup' for CMake module files
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup' for CMake config files
+[0.660s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_bringup', 'cmake_prefix_path')
+[0.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/hook/cmake_prefix_path.ps1'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/hook/cmake_prefix_path.dsv'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/hook/cmake_prefix_path.sh'
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/bin'
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/lib/pkgconfig/nav_bringup.pc'
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/lib/python3.10/site-packages'
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/bin'
+[0.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.ps1'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.dsv'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.sh'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.bash'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/nav_bringup/package.zsh'
+[0.662s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/nav_bringup/share/colcon-core/packages/nav_bringup)
+[2.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform -- -j32 -l32
+[2.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform
+[2.629s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(TF_transform)
+[2.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/TF_transform
+[2.629s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform' for CMake module files
+[2.630s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform' for CMake config files
+[2.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('TF_transform', 'cmake_prefix_path')
+[2.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/hook/cmake_prefix_path.ps1'
+[2.631s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/hook/cmake_prefix_path.dsv'
+[2.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/hook/cmake_prefix_path.sh'
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib'
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/bin'
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib/pkgconfig/TF_transform.pc'
+[2.633s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib/python3.10/site-packages'
+[2.633s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/bin'
+[2.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.ps1'
+[2.634s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.dsv'
+[2.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.sh'
+[2.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.bash'
+[2.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.zsh'
+[2.636s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/colcon-core/packages/TF_transform)
+[2.636s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(TF_transform)
+[2.636s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform' for CMake module files
+[2.637s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform' for CMake config files
+[2.637s] Level 1:colcon.colcon_core.shell:create_environment_hook('TF_transform', 'cmake_prefix_path')
+[2.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/hook/cmake_prefix_path.ps1'
+[2.637s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/hook/cmake_prefix_path.dsv'
+[2.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/hook/cmake_prefix_path.sh'
+[2.638s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib'
+[2.638s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/bin'
+[2.638s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib/pkgconfig/TF_transform.pc'
+[2.638s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/lib/python3.10/site-packages'
+[2.639s] Level 1:colcon.colcon_core.environment:checking '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/bin'
+[2.639s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.ps1'
+[2.639s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.dsv'
+[2.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.sh'
+[2.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.bash'
+[2.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/TF_transform/package.zsh'
+[2.641s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lin/SX_RM_Navigation/Path_Navigation/install/TF_transform/share/colcon-core/packages/TF_transform)
+[2.641s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.641s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.641s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.641s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.648s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.648s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.648s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.659s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.659s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lin/SX_RM_Navigation/Path_Navigation/install/local_setup.ps1'
+[2.661s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lin/SX_RM_Navigation/Path_Navigation/install/_local_setup_util_ps1.py'
+[2.663s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lin/SX_RM_Navigation/Path_Navigation/install/setup.ps1'
+[2.664s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lin/SX_RM_Navigation/Path_Navigation/install/local_setup.sh'
+[2.664s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lin/SX_RM_Navigation/Path_Navigation/install/_local_setup_util_sh.py'
+[2.665s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lin/SX_RM_Navigation/Path_Navigation/install/setup.sh'
+[2.666s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lin/SX_RM_Navigation/Path_Navigation/install/local_setup.bash'
+[2.666s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lin/SX_RM_Navigation/Path_Navigation/install/setup.bash'
+[2.667s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lin/SX_RM_Navigation/Path_Navigation/install/local_setup.zsh'
+[2.668s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lin/SX_RM_Navigation/Path_Navigation/install/setup.zsh'

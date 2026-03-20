@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_generator_py/spin_conversion/msg/_spin_command_s.c

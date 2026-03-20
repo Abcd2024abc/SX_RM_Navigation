@@ -5,7 +5,7 @@ livox_ros_driver2:
     data_src: 0                                         # 0-lidar, others-Invalid data src
     publish_freq: 20.0                                  # frequency of publish, 5.0, 10.0, 20.0, 50.0, etc.
     output_data_type: 0
-    frame_id: front_mid360
+    frame_id: mid360
     user_config_path: $(find-pkg-share nav_bringup)/config/reality/mid360_user_config.json
     cmdline_input_bd_code: livox0000000001
     lvx_file_path: ""
@@ -92,12 +92,12 @@ loam_interface:
     registered_scan_topic: "cloud_registered"
     odom_frame: "odom"
     base_frame: "base_footprint"
-    lidar_frame: "front_mid360"
+    lidar_frame: "mid360"
 
 sensor_scan_generation:
   ros__parameters:
     use_sim_time: false
-    lidar_frame: "front_mid360"
+    lidar_frame: "mid360"
     base_frame: "base_footprint"
     robot_base_frame: "gimbal_yaw"
 
@@ -173,7 +173,7 @@ small_gicp_relocalization:
     odom_frame: "odom"
     base_frame: "base_footprint"
     robot_base_frame: "gimbal_yaw"
-    lidar_frame: "front_mid360"
+    lidar_frame: "mid360"
     # The prior_pcd_file does not need to be specified since it going to be set by defaults in launch.
     # prior_pcd_file: ""
 

@@ -1,0 +1,83 @@
+[0.021s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lin/SX_RM_Navigation/Path_Navigation/src/path_tracking_controller -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller
+[0.102s] -- The C compiler identification is GNU 11.4.0
+[0.177s] -- The CXX compiler identification is GNU 11.4.0
+[0.186s] -- Detecting C compiler ABI info
+[0.233s] -- Detecting C compiler ABI info - done
+[0.238s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.239s] -- Detecting C compile features
+[0.239s] -- Detecting C compile features - done
+[0.242s] -- Detecting CXX compiler ABI info
+[0.294s] -- Detecting CXX compiler ABI info - done
+[0.301s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.301s] -- Detecting CXX compile features
+[0.301s] -- Detecting CXX compile features - done
+[0.303s] -- Found ament_cmake_auto: 1.3.13 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.412s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.451s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.562s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.566s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.572s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.579s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.588s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.611s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.612s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.664s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.690s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.728s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.735s] -- Looking for pthread.h
+[0.783s] -- Looking for pthread.h - found
+[0.783s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.829s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.830s] -- Found Threads: TRUE  
+[1.062s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.062s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.174s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.186s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/path_tracking_controller` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.189s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.190s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.190s] -- Configured cppcheck include dirs: /home/lin/SX_RM_Navigation/Path_Navigation/src/path_tracking_controller/include
+[1.190s] -- Configured cppcheck exclude dirs and/or files: 
+[1.191s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.191s] -- Configured cpplint exclude dirs and/or files: 
+[1.191s] -- Added test 'lint_cmake' to check CMake code style
+[1.191s] -- Added test 'xmllint' to check XML markup files
+[1.192s] -- Added test 'clang_format' to check C / C++ code style
+[1.194s] -- Configuring done
+[1.263s] -- Generating done
+[1.268s] -- Build files have been written to: /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller
+[1.275s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lin/SX_RM_Navigation/Path_Navigation/src/path_tracking_controller -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller
+[1.277s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller -- -j32 -l32
+[1.307s] [ 33%] [32mBuilding CXX object CMakeFiles/path_tracking_controller.dir/src/path_tracking_controller.cpp.o[0m
+[1.307s] [ 66%] [32mBuilding CXX object CMakeFiles/path_tracking_controller.dir/src/pid.cpp.o[0m
+[10.483s] [100%] [32m[1mLinking CXX shared library libpath_tracking_controller.so[0m
+[10.824s] [100%] Built target path_tracking_controller
+[10.860s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller -- -j32 -l32
+[10.866s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller
+[10.872s] -- Install configuration: "Release"
+[10.872s] -- Execute custom install script
+[10.873s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller//path_tracking_controller.xml
+[10.881s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/include/path_tracking_controller/path_tracking_controller.hpp
+[10.888s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/include/path_tracking_controller/pid.hpp
+[10.894s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/environment/library_path.sh
+[10.902s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/environment/library_path.dsv
+[10.909s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/lib/libpath_tracking_controller.so
+[10.917s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/ament_index/resource_index/package_run_dependencies/path_tracking_controller
+[10.924s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/ament_index/resource_index/parent_prefix_path/path_tracking_controller
+[10.932s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/environment/ament_prefix_path.sh
+[10.939s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/environment/ament_prefix_path.dsv
+[10.947s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/environment/path.sh
+[10.954s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/environment/path.dsv
+[10.961s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/local_setup.bash
+[10.968s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/local_setup.sh
+[10.976s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/local_setup.zsh
+[10.983s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/local_setup.dsv
+[10.990s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.dsv
+[10.998s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/ament_index/resource_index/packages/path_tracking_controller
+[11.005s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/path_tracking_controller
+[11.012s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.020s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.027s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[11.034s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/cmake/path_tracking_controllerConfig.cmake
+[11.042s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/cmake/path_tracking_controllerConfig-version.cmake
+[11.050s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/path_tracking_controller/share/path_tracking_controller/package.xml
+[11.072s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller

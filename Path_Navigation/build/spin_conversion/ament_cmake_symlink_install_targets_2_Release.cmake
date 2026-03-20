@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_generator_py/spin_conversion/spin_conversion_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "spin_conversion__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/spin_conversion")

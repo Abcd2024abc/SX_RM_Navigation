@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/src/livox_ros_driver2/launch/msg_MID360_launch.py

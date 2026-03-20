@@ -28,7 +28,6 @@ def generate_launch_description():
     use_composition = LaunchConfiguration("use_composition")
     use_respawn = LaunchConfiguration("use_respawn")
     rviz_config_file = LaunchConfiguration("rviz_config_file")
-    use_robot_state_pub = LaunchConfiguration("use_robot_state_pub")
     use_rviz = LaunchConfiguration("use_rviz")
 
     # Declare the launch arguments
@@ -102,12 +101,6 @@ def generate_launch_description():
         description="Whether to respawn if a node crashes. Applied when composition is disabled.",
     )
 
-    declare_use_robot_state_pub_cmd = DeclareLaunchArgument(
-        "use_robot_state_pub",
-        default_value="False",
-        description="Whether to start the robot state publisher",
-    )
-
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         "rviz_config_file",
         default_value=os.path.join(bringup_dir, "rviz", "nav2_default_view.rviz"),
@@ -130,10 +123,9 @@ def generate_launch_description():
 
     start_robot_state_publisher_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(launch_dir, "robot_state_publisher_launch.py")
+            os.path.join(launch_dir, "TF_transform_launch.py")
         ),
         # NOTE: This startup file is only used when the navigation module is standalone
-        condition=IfCondition(use_robot_state_pub),
         launch_arguments={
             "namespace": namespace,
             "use_sim_time": use_sim_time,
@@ -187,7 +179,6 @@ def generate_launch_description():
     ld.add_action(declare_autostart_cmd)
     ld.add_action(declare_use_composition_cmd)
     ld.add_action(declare_rviz_config_file_cmd)
-    ld.add_action(declare_use_robot_state_pub_cmd)
     ld.add_action(declare_use_rviz_cmd)
     ld.add_action(declare_use_respawn_cmd)
     # Add the actions to launch all of the navigation nodes

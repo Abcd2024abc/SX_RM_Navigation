@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_generator_c/spin_conversion/msg/detail/spin_command__struct.h

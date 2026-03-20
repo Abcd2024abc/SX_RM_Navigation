@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/build/loam_interface/ament_cmake_core/loam_interfaceConfig.cmake

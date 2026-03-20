@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/src/small_gicp_relocalization/include/small_gicp_relocalization/small_gicp_relocalization.hpp

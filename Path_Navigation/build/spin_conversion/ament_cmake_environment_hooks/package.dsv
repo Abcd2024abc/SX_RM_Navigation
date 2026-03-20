@@ -1,0 +1,4 @@
+source;share/spin_conversion/local_setup.bash
+source;share/spin_conversion/local_setup.dsv
+source;share/spin_conversion/local_setup.sh
+source;share/spin_conversion/local_setup.zsh

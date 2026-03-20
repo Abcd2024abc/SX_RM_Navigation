@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/src/loam_interface/launch/loam_interface_launch.py

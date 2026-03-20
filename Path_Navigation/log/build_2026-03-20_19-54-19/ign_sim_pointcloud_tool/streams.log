@@ -1,0 +1,32 @@
+[0.023s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool -- -j32 -l32
+[0.065s] [ 50%] Built target ign_sim_pointcloud_tool_node
+[0.071s] [100%] Built target ign_sim_pointcloud_tool
+[0.095s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool -- -j32 -l32
+[0.105s] Invoking command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool
+[0.108s] -- Install configuration: "Release"
+[0.108s] -- Execute custom install script
+[0.108s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib/ign_sim_pointcloud_tool/ign_sim_pointcloud_tool_node
+[0.108s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/include/ign_sim_pointcloud_tool/point_cloud_converter.hpp
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/environment/library_path.sh
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/environment/library_path.dsv
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/lib/libign_sim_pointcloud_tool.so
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ament_index/resource_index/package_run_dependencies/ign_sim_pointcloud_tool
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ament_index/resource_index/parent_prefix_path/ign_sim_pointcloud_tool
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/environment/ament_prefix_path.sh
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/environment/ament_prefix_path.dsv
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/environment/path.sh
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/environment/path.dsv
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/local_setup.bash
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/local_setup.sh
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/local_setup.zsh
+[0.109s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/local_setup.dsv
+[0.109s] -- Symlinking: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.dsv
+[0.110s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ament_index/resource_index/packages/ign_sim_pointcloud_tool
+[0.110s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ament_index/resource_index/rclcpp_components/ign_sim_pointcloud_tool
+[0.111s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.111s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.111s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/cmake/ament_cmake_export_libraries-extras.cmake
+[0.111s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/cmake/ign_sim_pointcloud_toolConfig.cmake
+[0.111s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/cmake/ign_sim_pointcloud_toolConfig-version.cmake
+[0.111s] -- Up-to-date symlink: /home/lin/SX_RM_Navigation/Path_Navigation/install/ign_sim_pointcloud_tool/share/ign_sim_pointcloud_tool/package.xml
+[0.152s] Invoked command in '/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool

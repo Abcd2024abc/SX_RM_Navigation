@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-99b56f0afe00745eea17.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "small_gicp_relocalization",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "small_gicp_relocalization::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-small_gicp_relocalization-Release-cfa5280c03514e61a8d0.json",
+					"name" : "small_gicp_relocalization",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "small_gicp_relocalization_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-small_gicp_relocalization_node-Release-b8194465c767ed941db8.json",
+					"name" : "small_gicp_relocalization_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "small_gicp_relocalization_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-small_gicp_relocalization_uninstall-Release-1174d22880ac3effdd22.json",
+					"name" : "small_gicp_relocalization_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-939736dde47d75af73f4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization",
+		"source" : "/home/lin/SX_RM_Navigation/Path_Navigation/src/small_gicp_relocalization"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

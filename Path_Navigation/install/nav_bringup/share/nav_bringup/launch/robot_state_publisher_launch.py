@@ -1,0 +1,1 @@
+/home/lin/SX_RM_Navigation/Path_Navigation/src/nav_bringup/launch/robot_state_publisher_launch.py

@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-4d7f4e2a6b446346a486.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ign_sim_pointcloud_tool",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ign_sim_pointcloud_tool::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ign_sim_pointcloud_tool-Release-0f47f0ec7e4bb46c218a.json",
+					"name" : "ign_sim_pointcloud_tool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ign_sim_pointcloud_tool_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ign_sim_pointcloud_tool_node-Release-47bad9470ae555c6014e.json",
+					"name" : "ign_sim_pointcloud_tool_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ign_sim_pointcloud_tool_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ign_sim_pointcloud_tool_uninstall-Release-91a819139772f78685c1.json",
+					"name" : "ign_sim_pointcloud_tool_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-12f145b9fa46057edb12.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool",
+		"source" : "/home/lin/SX_RM_Navigation/Path_Navigation/src/ign_sim_pointcloud_tool"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

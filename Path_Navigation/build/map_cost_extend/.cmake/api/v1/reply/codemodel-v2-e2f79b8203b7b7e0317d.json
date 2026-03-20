@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-cf2f5a87486bac90268d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "map_cost_extend",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "layers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-layers-Release-c747458f3b1dfed8dbe1.json",
+					"name" : "layers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_cost_extend_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_cost_extend_uninstall-Release-5336cbc71d2660368141.json",
+					"name" : "map_cost_extend_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pb_back_up_frees_space_behavior::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pb_back_up_frees_space_behavior-Release-4fe24618b4ea5b1bb0cd.json",
+					"name" : "pb_back_up_frees_space_behavior",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-4a8367d2e12ce3e5fc0f.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lin/SX_RM_Navigation/Path_Navigation/build/map_cost_extend",
+		"source" : "/home/lin/SX_RM_Navigation/Path_Navigation/src/map_cost_extend"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
