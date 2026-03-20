@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/spin_conversion_node" "TARGETS" "spin_conversion_node" "DESTINATION" "lib/spin_conversion")

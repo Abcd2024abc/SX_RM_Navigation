@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/ign_sim_pointcloud_tool/libign_sim_pointcloud_tool.so" "TARGETS" "ign_sim_pointcloud_tool" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

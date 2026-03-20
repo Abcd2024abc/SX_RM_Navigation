@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/rosidl_generator_py/spin_conversion/_spin_conversion_s.ep.rosidl_typesupport_fastrtps_c.c

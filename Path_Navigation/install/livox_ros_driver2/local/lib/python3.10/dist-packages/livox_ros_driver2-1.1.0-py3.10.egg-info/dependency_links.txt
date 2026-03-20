@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/build/livox_ros_driver2/ament_cmake_python/livox_ros_driver2/livox_ros_driver2.egg-info/dependency_links.txt

@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/src/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py

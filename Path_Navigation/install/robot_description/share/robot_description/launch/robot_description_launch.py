@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/src/robot_description/launch/robot_description_launch.py

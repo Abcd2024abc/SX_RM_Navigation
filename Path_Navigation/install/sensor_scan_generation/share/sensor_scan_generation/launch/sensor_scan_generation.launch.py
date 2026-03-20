@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/src/sensor_scan_generation/launch/sensor_scan_generation.launch.py

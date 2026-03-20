@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/src/nav_bringup/launch/rm_navigation_simulation_launch.py

@@ -1,6 +1,0 @@
-{
-  "package_name": "spin_conversion",
-  "non_idl_tuples": [
-    "/home/lin/SX_RM_Navigation/Path_Navigation/src/spin_conversion:msg/SpinCommand.msg"
-  ]
-}

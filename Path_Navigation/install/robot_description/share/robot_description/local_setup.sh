@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/build/robot_description/ament_cmake_environment_hooks/local_setup.sh

@@ -1,1 +1,0 @@
-/home/lin/SX_RM_Navigation/Path_Navigation/src/loam_interface/include/loam_interface/loam_interface.hpp

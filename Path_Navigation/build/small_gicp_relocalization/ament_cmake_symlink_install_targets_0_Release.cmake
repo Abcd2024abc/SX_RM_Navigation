@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/small_gicp_relocalization/small_gicp_relocalization_node" "TARGETS" "small_gicp_relocalization_node" "DESTINATION" "lib/small_gicp_relocalization")

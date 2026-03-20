@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/spin_conversion/libspin_conversion_core.so" "TARGETS" "spin_conversion_core" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

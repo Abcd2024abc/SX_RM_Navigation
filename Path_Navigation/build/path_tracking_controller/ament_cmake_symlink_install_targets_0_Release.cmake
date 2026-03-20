@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lin/SX_RM_Navigation/Path_Navigation/build/path_tracking_controller/libpath_tracking_controller.so" "TARGETS" "path_tracking_controller" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
