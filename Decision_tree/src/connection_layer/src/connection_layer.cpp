@@ -19,10 +19,10 @@ ConnectionLayer::ConnectionLayer(const rclcpp::NodeOptions& options) : Node("ser
   auto sb = serial::StopBits::ONE;      // 停止位：默认1个停止位
   serial::SerialPortConfig config(baudrate, fc, pt, sb);
 
+  serial_config_ = std::make_shared<serial::SerialPortConfig>(config);
+
   io_context_ = std::make_shared<drivers::common::IoContext>(2);
   serial_driver_ = std::make_unique<serial::SerialDriver>(*io_context_);
-
-  serial_config_ = std::make_shared<serial::SerialPortConfig>(config);
 
   // Create Publisher
   robot_pub_ = this->create_publisher<connection_layer::msg::RobotStatus>("robot/status", 10);
@@ -32,8 +32,18 @@ ConnectionLayer::ConnectionLayer(const rclcpp::NodeOptions& options) : Node("ser
   cmd_vel_sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
       "cmd_vel", 10, std::bind(&ConnectionLayer::cmdVelCallback, this, std::placeholders::_1));
 
-  receive_thread_ = std::thread(&ConnectionLayer::receive_data, this);
-  send_thread_ = std::thread(&ConnectionLayer::send_data, this);
+  if (openSerial())
+  {
+    RCLCPP_INFO(this->get_logger(), "串口打开成功，启动数据线程");
+    receive_thread_ = std::thread(&ConnectionLayer::receive_data, this);
+    send_thread_ = std::thread(&ConnectionLayer::send_data, this);
+  }
+  else
+  {
+    RCLCPP_ERROR(this->get_logger(), "串口打开失败，线程未启动");
+  }
+
+  RCLCPP_INFO(this->get_logger(), "中间层启动");
 }
 
 ConnectionLayer::~ConnectionLayer()

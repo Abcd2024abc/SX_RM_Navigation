@@ -1,7 +1,7 @@
 world: rmul_2026    # 指定导航世界。
-slam: False    # 是否启用SLAM（同时定位与地图构建）。
+slam: True    # 是否启用SLAM（同时定位与地图构建）。
 use_robot_state_pub: True    # 是否使用机器人TF状态发布器。
 use_rviz: True    # 是否使用RViz进行可视化。
 
-# model: False
-# namespace: ""
+model: False
+namespace: "red_standard_robot1"

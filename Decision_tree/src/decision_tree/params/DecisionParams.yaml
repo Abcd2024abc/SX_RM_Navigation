@@ -1,13 +1,16 @@
 decision_tree:
   ros__parameters:
-    low_hp_threshold: 15
-    normal_hp_threshold: 40
-    safe_hp_threshold: 90
+    low_hp_threshold: 0.3
+    safe_hp_threshold: 0.9
+    normal_hp_threshold: 0.5
 
     base_position_x: 0.0
     base_position_y: 0.0
     center_position_x: 5.5
     center_position_y: 5.5
+    no_attack_duration: 5.0
+
+    activate_search: 5.0
 
     
 

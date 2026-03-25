@@ -20,6 +20,7 @@ ament_auto_find_build_dependencies()
 
 ## 生成自定义消息接口
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/ControlSignal.msg"
   "msg/GameStatus.msg"
   "msg/RobotStatus.msg"
   DEPENDENCIES std_msgs
