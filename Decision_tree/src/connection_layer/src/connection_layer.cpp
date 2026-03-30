@@ -170,10 +170,8 @@ void ConnectionLayer::receive_data()
           return f;
         };
 
-        float fr = read_float(data_ptr);
-        float fl = read_float(data_ptr);
-        float rr = read_float(data_ptr);
-        float rl = read_float(data_ptr);
+        float vx = read_float(data_ptr);
+        float vy = read_float(data_ptr);
         float hp = read_float(data_ptr);
         float gain = read_float(data_ptr);
         float progress = read_float(data_ptr);
@@ -181,10 +179,8 @@ void ConnectionLayer::receive_data()
 
         // 发布消息
         connection_layer::msg::RobotStatus robot_msg;
-        robot_msg.fr = fr;
-        robot_msg.fl = fl;
-        robot_msg.rr = rr;
-        robot_msg.rl = rl;
+        robot_msg.vx = vx;
+        robot_msg.vy = vy;
         robot_msg.hp = hp;
         robot_pub_->publish(robot_msg);
 

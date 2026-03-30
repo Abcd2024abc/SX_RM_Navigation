@@ -1,8 +1,4 @@
 #include "decision_tree/decision_tree.hpp"
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2/LinearMath/Matrix3x3.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
-#include <chrono>
 
 namespace decision_tree
 {
@@ -38,17 +34,20 @@ void DecisionTree::initialize()
   auto& pd = params_.decision_params;
 
   set_params(this, "robot_base_frame", p.robot_base_frame, std::string("base_footprint"));
-  set_params(this, "map_topic", p.map_topic, std::string("/map"));
+  set_params(this, "map_topic", p.map_topic, std::string("map"));
+  set_params(this, "goal_topic", p.goal_topic, std::string("goal_topic"));
   set_params(this, "position_tolerance", p.position_tolerance, 0.3);
-  set_params(this, "navigation_timeout", p.navigation_timeout, 60.0);
-  set_params(this, "connection_timeout", p.connection_timeout, 5.0);
-  set_params(this, "max_connection_retries", p.max_connection_retries, 3);
+  set_params(this, "maximum_hp", p.maximum_hp, 300);
+  set_params(this, "chase_hp", p.chase_hp, 50);
+  set_params(this, "chase_proportion", p.chase_proportion, 0.6);
+  set_params(this, "approaching_enemy_x", p.approaching_enemy_x, 0.9);
+  set_params(this, "approaching_enemy_y", p.approaching_enemy_y, 0.9);
 
   // 决策参数
   set_params(this, "low_hp_threshold", pd.low_hp_threshold, 0.3);        // 30%
   set_params(this, "safe_hp_threshold", pd.safe_hp_threshold, 0.9);      // 90%
   set_params(this, "normal_hp_threshold", pd.normal_hp_threshold, 0.5);  // 50%
-  set_params(this, "no_attack_duration", pd.no_attack_duration, 5.0);   // 5秒
+  set_params(this, "under_attack_delay", pd.under_attack_delay, 5.0);    // 5秒
 
   // 位置参数
   set_params(this, "base_position_x", pd.base_x, 0.0);
@@ -78,7 +77,6 @@ void DecisionTree::initialize()
   initialize_timers();
 
   // 设置初始状态
-  state_.current_state = DecisionState::PAUSED;
   state_.last_state_change_time = get_current_time();
 
   logger("导航系统初始化完成", "info");
@@ -86,11 +84,6 @@ void DecisionTree::initialize()
 
 void DecisionTree::initialize_subscriptions()
 {
-  // 地图订阅
-  map_sub_ = this->create_subscription<nav_msgs::msg::OccupancyGrid>(
-      params_.map_topic, rclcpp::QoS(10).reliable(),
-      [this](const nav_msgs::msg::OccupancyGrid::SharedPtr msg) { map_callback(msg); });
-
   // 游戏状态订阅
   game_status_sub_ = this->create_subscription<connection_layer::msg::GameStatus>(
       "game_status", rclcpp::QoS(10).reliable(),
@@ -107,49 +100,25 @@ void DecisionTree::initialize_subscriptions()
 void DecisionTree::initialize_timers()
 {
   // 状态更新定时器
-  status_timer_ = this->create_wall_timer(std::chrono::milliseconds(1000), [this]() { update_status(); });
+  status_timer_ = this->create_wall_timer(std::chrono::milliseconds(500), [this]() { update_status(); });
 
   // 决策树定时器
-  decision_timer_ = this->create_wall_timer(std::chrono::milliseconds(1000), [this]() { decision_tree_callback(); });
+  decision_timer_ = this->create_wall_timer(std::chrono::milliseconds(300), [this]() { decision_tree_callback(); });
 
   // 攻击对策定时器
-  attack_check_timer_ = this->create_wall_timer(std::chrono::milliseconds(500), [this]() { attack_check_callback(); });
+  attack_check_timer_ = this->create_wall_timer(std::chrono::milliseconds(300), [this]() { attack_check_callback(); });
 }
 
 void DecisionTree::initialize_navigation()
 {
-  nav_action_client_ = rclcpp_action::create_client<NavigateToPose>(this, "navigate_to_pose");
+  nav_action_client_ = rclcpp_action::create_client<NavigateToPose>(this, params_.goal_topic);
 }
 
 // =============== 回调函数 ===============
 
-void DecisionTree::map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg)
-{
-  std::lock_guard<std::mutex> lock(map_mutex_);
-
-  try
-  {
-    // 存储地图数据
-    map_data_ = std::vector<int8_t>(msg->data.begin(), msg->data.end());
-    map_metadata_ = msg;
-    state_.map_available = true;
-
-    logger("接收到地图数据:", "info");
-    logger("  尺寸: " + std::to_string(msg->info.width) + "x" + std::to_string(msg->info.height), "info");
-    logger("  原点: (" + std::to_string(msg->info.origin.position.x) + ", " +
-               std::to_string(msg->info.origin.position.y) + ")",
-           "info");
-  }
-  catch (const std::exception& e)
-  {
-    logger("处理地图数据失败: " + std::string(e.what()), "error");
-    state_.map_available = false;
-  }
-}
-
 void DecisionTree::game_status_callback(const connection_layer::msg::GameStatus::SharedPtr msg)
 {
-  std::lock_guard<std::mutex> lock(game_state_mutex_);
+  auto game_lock = write_lock(game_state_mutex_);
 
   // 更新游戏状态
   game_state_.game_progress = static_cast<int>(msg->progress);
@@ -158,31 +127,17 @@ void DecisionTree::game_status_callback(const connection_layer::msg::GameStatus:
   game_state_.center_gain_point = static_cast<int>(msg->gain);
 
   // 根据比赛进程调整决策状态
-  switch (game_state_.game_progress)
+  if (game_state_.game_progress == 4 && !state_.is_active)
   {
-    case 0:
-      break;
-
-    case 1:
-      break;
-
-    case 2:
-      break;
-
-    case 3:
-      break;
-
-    case 4:
-      logger("比赛开始", "info");
-      state_.is_active = true;
-      break;
-
-    case 5:
-      change_state(DecisionState::PAUSED);
-      state_.is_active = false;
-      cancel_navigation();
-      logger("比赛结束，停止所有行动", "info");
-      break;
+    logger("比赛开始", "info");
+    state_.is_active = true;
+  }
+  else if (game_state_.game_progress == 5)
+  {
+    logger("比赛结束", "warn");
+    state_.is_active = false;
+    state_.current_state = DecisionState::PAUSED;
+    state_.previous_state = DecisionState::PAUSED;
   }
 
   logger("游戏状态更新 - 进程: " + std::to_string(game_state_.game_progress) +
@@ -192,10 +147,8 @@ void DecisionTree::game_status_callback(const connection_layer::msg::GameStatus:
 
 void DecisionTree::robot_status_callback(const connection_layer::msg::RobotStatus::SharedPtr msg)
 {
-  std::lock_guard<std::mutex> lock(game_state_mutex_);
+  auto game_lock = write_lock(game_state_mutex_);
 
-  if (game_state_.maximum_hp == -1 && static_cast<int>(msg->hp) > 5)
-    game_state_.maximum_hp = static_cast<int>(msg->hp);
   // 记录血量变化
   int previous_hp = game_state_.current_hp;
   int current_hp = static_cast<int>(msg->hp);
@@ -204,16 +157,26 @@ void DecisionTree::robot_status_callback(const connection_layer::msg::RobotStatu
   {
     // 血量减少，说明受到攻击
     game_state_.last_attack_time = get_current_time();
-    game_state_.under_attack = true;
     logger("检测到受到攻击! 当前血量: " + std::to_string(current_hp) + ", 上次血量: " + std::to_string(previous_hp),
            "info");
+    game_state_.under_attack = true;
+  }
+
+  if (get_current_time() - game_state_.last_attack_time > params_.decision_params.under_attack_delay)
+  {
+    game_state_.under_attack = false;
   }
 
   // 更新血量
   game_state_.current_hp = current_hp;
 
-  logger("机器人状态更新 - 血量: " + std::to_string(game_state_.current_hp) + "/" +
-             std::to_string(game_state_.maximum_hp) + " (" + std::to_string(get_hp_percentage() * 100) + "%)",
+  auto attack_lock = write_lock(attack_state_mutex_);
+  attack_state_.infantry_hp = msg->infantry_hp;
+  attack_state_.hero_hp = msg->hero_hp;
+  attack_state_.sentinel_hp = msg->sentinel_hp;
+
+  logger("机器人状态更新 - 血量: " + std::to_string(game_state_.current_hp) + "/" + std::to_string(params_.maximum_hp) +
+             " (" + std::to_string(get_hp_percentage() * 100) + "%)",
          "debug");
 }
 
@@ -221,45 +184,27 @@ void DecisionTree::robot_status_callback(const connection_layer::msg::RobotStatu
 
 void DecisionTree::update_status()
 {
-  std::lock_guard<std::mutex> lock(state_mutex_);
-
   // 更新机器人位置
-  get_robot_position();
+  std::vector<double> position = get_robot_position();
 
-  // 信息
-  std::string status_msg;
-  status_msg += "状态: " + state_to_string(state_.current_state);
-  status_msg += ", 导航中=" + std::to_string(state_.is_navigating);
-
+  if (position[0] > params_.decision_params.activate_search)
   {
-    std::lock_guard<std::mutex> lock(game_state_mutex_);
-    status_msg += ", 游戏进程=" + std::to_string(game_state_.game_progress);
-    status_msg += ", 血量=" + std::to_string(get_hp_percentage() * 100) + "%";
-    status_msg += ", 增益点状态=" + std::to_string(game_state_.center_gain_point);
+    state_.search = true;
   }
-
-  if (state_.is_navigating)
+  else if (!game_state_.under_attack)
   {
-    double distance = calculate_distance(state_.robot_x, state_.robot_y, state_.target_x, state_.target_y);
-    status_msg += ", 目标距离=" + std::to_string(distance) + "m";
-  }
-
-  if (state_.robot_y > params_.decision_params.activate_search)
-  {
-    state_.search = 1.0;
-  }
-  else
-  {
-    state_.search = 0.0;
+    state_.rotate = false;
+    state_.search = false;
   }
   if (!state_.is_active)
   {
-    state_.search = 0.0;
-    state_.rotate = 0.0;
+    state_.search = false;
+    state_.rotate = false;
   }
   pub_control_signal(state_.rotate, state_.search);
 
-  RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 5000, "%s", status_msg.c_str());
+  auto lock = write_lock(position_mutex_);
+  state_.position = std::move(position);
 }
 
 void DecisionTree::decision_tree_callback()
@@ -269,51 +214,34 @@ void DecisionTree::decision_tree_callback()
     return;
   }
 
-  // 更新决策状态
-  if (update_decision_state())
-  {
-    // 执行当前状态
-    execute_decision_state();
-  };
-
-  state_.last_decision_time = get_current_time();
+  auto new_state = normal_decision();
+  if (!state_.is_chase)
+    change_state(new_state);
+  else
+    return;
 }
 
 void DecisionTree::attack_check_callback()
 {
-  if (game_state_.under_attack == false)
-    return;
-
-  state_.interrupt_decision = true;
-  /// @brief 逻辑待处理
-
-  game_state_.under_attack = false;
-  state_.interrupt_decision = false;
+  {
+    auto game_lock = read_lock(game_state_mutex_);
+    auto attack_lock = read_lock(attack_state_mutex_);
+    if (!state_.is_active)
+    {
+      return;
+    }
+    else if (!game_state_.under_attack || !attack_state_.lock_enemy)
+      return;
+  }
+  auto new_state = attack_decision();
+  if (state_.is_chase)
+    change_state(new_state);
 }
 
 // =============== 导航方法 ===============
 
 bool DecisionTree::navigate_to_point(double x, double y, double yaw)
 {
-  std::lock_guard<std::mutex> lock(state_mutex_);
-  // 检查目标点是否在地图边界内
-  if (!is_in_map_boundary(x, y))
-  {
-    logger("目标点不在有效地图边界内", "error");
-    return false;
-  }
-
-  // 检查当前位置与目标位置的距离
-  if (get_robot_position())
-  {
-    double distance = calculate_distance(state_.robot_x, state_.robot_y, x, y);
-    if (distance < params_.position_tolerance)
-    {
-      logger("已在目标点附近 (距离: " + std::to_string(distance) + "m), 跳过导航", "info");
-      return true;
-    }
-  }
-
   // 创建目标姿态
   auto goal_pose = geometry_msgs::msg::PoseStamped();
   goal_pose.header.frame_id = "map";
@@ -347,7 +275,6 @@ bool DecisionTree::navigate_to_pose(const geometry_msgs::msg::PoseStamped& pose)
         if (!goal_handle)
         {
           logger("导航目标被拒绝", "error");
-          state_.is_navigating = false;
         }
         else
         {
@@ -355,13 +282,6 @@ bool DecisionTree::navigate_to_pose(const geometry_msgs::msg::PoseStamped& pose)
           current_goal_handle_ = goal_handle;
         }
       };
-
-  // 导航进度
-  send_goal_options.feedback_callback = [this](GoalHandleNavigateToPose::SharedPtr,
-                                               const std::shared_ptr<const NavigateToPose::Feedback> feedback) {
-    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "导航进度 - 剩余距离: %.2f米, 导航时间: %d秒",
-                         feedback->distance_remaining, feedback->navigation_time.sec);
-  };
 
   // 导航结果
   send_goal_options.result_callback = [this](const GoalHandleNavigateToPose::WrappedResult& result) {
@@ -381,16 +301,10 @@ bool DecisionTree::navigate_to_pose(const geometry_msgs::msg::PoseStamped& pose)
         break;
     }
 
-    std::lock_guard<std::mutex> lock(state_mutex_);
-    state_.is_navigating = false;
     current_goal_handle_.reset();
   };
 
   auto future_goal_handle = nav_action_client_->async_send_goal(goal_msg, send_goal_options);
-
-  state_.is_navigating = true;
-  state_.target_x = pose.pose.position.x;
-  state_.target_y = pose.pose.position.y;
 
   logger("开始导航到目标点: (" + std::to_string(pose.pose.position.x) + ", " + std::to_string(pose.pose.position.y) +
              ")",
@@ -407,144 +321,47 @@ void DecisionTree::cancel_navigation()
     nav_action_client_->async_cancel_goal(current_goal_handle_);
   }
 
-  std::lock_guard<std::mutex> lock(state_mutex_);
-  state_.is_navigating = false;
-  state_.target_x = 0.0;
-  state_.target_y = 0.0;
   current_goal_handle_.reset();
 }
 
-bool DecisionTree::get_robot_position()
+std::vector<double> DecisionTree::get_robot_position()
 {
   try
   {
     // 获取变换
-    auto transform = tf_buffer_->lookupTransform("map", params_.robot_base_frame, tf2::TimePointZero);
-
-    // 更新位置
-    state_.robot_x = transform.transform.translation.x;
-    state_.robot_y = transform.transform.translation.y;
+    auto tf = tf_buffer_->lookupTransform(params_.map_topic, params_.robot_base_frame, tf2::TimePointZero);
+    std::vector<double> position(3);
+    position[0] = tf.transform.translation.x;
+    position[1] = tf.transform.translation.y;
 
     // 计算偏航角
-    double qx = transform.transform.rotation.x;
-    double qy = transform.transform.rotation.y;
-    double qz = transform.transform.rotation.z;
-    double qw = transform.transform.rotation.w;
+    double qx = tf.transform.rotation.x;
+    double qy = tf.transform.rotation.y;
+    double qz = tf.transform.rotation.z;
+    double qw = tf.transform.rotation.w;
 
     tf2::Quaternion q(qx, qy, qz, qw);
     tf2::Matrix3x3 m(q);
     double roll, pitch, yaw;
     m.getRPY(roll, pitch, yaw);
-    state_.robot_yaw = yaw;
+    position[2] = yaw;
+    return position;
 
-    return true;
+    logger("位置获取: x=" + std::to_string(position[0]) + ", y=" + std::to_string(position[1]), "warn");
   }
   catch (const tf2::TransformException& e)
   {
     logger("获取机器人位置失败: " + std::string(e.what()), "warn");
-    return false;
+    return state_.position;
   }
   catch (const std::exception& e)
   {
     logger("获取位置异常: " + std::string(e.what()), "error");
-    return false;
+    return state_.position;
   }
 }
 
 // =============== 决策树方法 ===============
-
-bool DecisionTree::update_decision_state()
-{
-  std::lock_guard<std::mutex> lock(game_state_mutex_);
-  if (state_.interrupt_decision)
-  {
-    return false;
-  }
-  
-  // 规则: 当前血量低时返回基地补充
-  else if (is_low_hp())
-  {
-    if (state_.current_state != DecisionState::RETURNING_TO_BASE)
-    {
-      change_state(DecisionState::RETURNING_TO_BASE);
-      return true;
-    }
-    else
-      return false;
-  }
-
-  // 规则: 返回基地状态，血量补充到安全继续行动
-  else if (state_.current_state == DecisionState::RETURNING_TO_BASE)
-  {
-    if (is_safe_hp())
-    {
-      change_state(DecisionState::CAPTURING_CENTER);
-      return true;
-    }
-    else
-      return false;
-  }
-
-  // 规则：己方未占领则执行占领
-  else if (!center_captured())
-  {
-    if (state_.current_state != DecisionState::CAPTURING_CENTER)
-    {
-      change_state(DecisionState::CAPTURING_CENTER);
-      return true;
-    }
-    else
-      return false;
-  }
-
-  // 规则: 如果不在增益点并且己方占领
-  else if (!in_key_position(1) && center_captured())
-  {
-    change_state(DecisionState::APPROACHING_ENEMY);
-    return true;
-  }
-
-  // 规则: 当血量充足且增益点为己方占领状态，5秒未受到攻击，尝试接近敌方
-  else if (is_normal_hp() && center_captured() &&
-           has_not_been_attacked_for(params_.decision_params.no_attack_duration) &&
-           state_.current_state != DecisionState::APPROACHING_ENEMY)
-  {
-    change_state(DecisionState::APPROACHING_ENEMY);
-    return true;
-  }
-
-  // 规则: 如果正在接近敌方基地但条件不再满足，返回抢占中心点
-  else if (state_.current_state == DecisionState::APPROACHING_ENEMY && center_captured())
-  {
-    change_state(DecisionState::CAPTURING_CENTER);
-    return true;
-  }
-
-  return false;
-}
-
-void DecisionTree::execute_decision_state()
-{
-  switch (state_.current_state)
-  {
-    case DecisionState::GUARD:
-      handle_guard_state();
-      break;
-    case DecisionState::CAPTURING_CENTER:
-      handle_capturing_center_state();
-      break;
-    case DecisionState::RETURNING_TO_BASE:
-      handle_returning_base_state();
-      break;
-    case DecisionState::APPROACHING_ENEMY:
-      handle_approaching_enemy_state();
-      break;
-    case DecisionState::PAUSED:
-      // 暂停状态，不执行任何操作
-      break;
-  }
-}
-
 void DecisionTree::change_state(DecisionState new_state)
 {
   if (state_.current_state != new_state)
@@ -556,14 +373,103 @@ void DecisionTree::change_state(DecisionState new_state)
     logger("决策状态改变: " + state_to_string(state_.previous_state) + " -> " + state_to_string(state_.current_state),
            "info");
 
-    cancel_navigation();
+    switch (state_.current_state)
+    {
+      case DecisionState::GUARD:
+        handle_guard_state();
+        break;
+      case DecisionState::CAPTURING_CENTER:
+        handle_capturing_center_state();
+        break;
+      case DecisionState::RETURNING_TO_BASE:
+        handle_returning_base_state();
+        break;
+      case DecisionState::APPROACHING_ENEMY:
+        handle_approaching_enemy_state();
+        break;
+      case DecisionState::CHASE_ENEMY:
+        handle_chase_enemy_state();
+        break;
+      case DecisionState::PAUSED:
+        // 暂停状态，不执行任何操作
+        break;
+    }
   }
+}
+
+DecisionState DecisionTree::normal_decision()
+{
+  auto lock = read_lock(game_state_mutex_);
+  // 规则: 当前血量低时返回基地补充
+  if (is_low_hp())
+  {
+    return DecisionState::RETURNING_TO_BASE;
+  }
+
+  // 规则: 返回基地状态，血量补充到安全继续行动
+  else if (state_.current_state == DecisionState::RETURNING_TO_BASE)
+  {
+    if (is_safe_hp())
+    {
+      return DecisionState::CAPTURING_CENTER;
+    }
+    return DecisionState::RETURNING_TO_BASE;
+  }
+
+  // 规则：己方未占领则执行占领
+  else if (!center_captured())
+  {
+    return DecisionState::CAPTURING_CENTER;
+  }
+
+  // 规则: 如果不在增益点并且己方占领
+  else if (!in_key_position(1) && center_captured())
+  {
+    return DecisionState::APPROACHING_ENEMY;
+  }
+
+  // 规则: 当血量充足且增益点为己方占领状态，未受到攻击，尝试接近敌方
+  else if (is_normal_hp() && center_captured() &&
+           has_not_been_attacked_for(params_.decision_params.under_attack_delay) &&
+           state_.current_state != DecisionState::APPROACHING_ENEMY)
+  {
+    return DecisionState::APPROACHING_ENEMY;
+  }
+
+  // 规则: 如果正在接近敌方基地但条件不再满足，返回抢占中心点
+  else if (state_.current_state == DecisionState::APPROACHING_ENEMY && !center_captured())
+  {
+    return DecisionState::CAPTURING_CENTER;
+  }
+
+  return DecisionState::GUARD;
+}
+
+DecisionState DecisionTree::attack_decision()
+{
+  auto lock = read_lock(game_state_mutex_);
+  auto attack_lock = read_lock(attack_state_mutex_);
+  // 规则：自身血量正常，且敌方血量低于阈值追击
+  if (is_normal_hp() && is_chase_hp(attack_state_.enemy_type))
+  {
+    state_.is_chase = true;
+    state_.rotate = false;
+    return DecisionState::CHASE_ENEMY;
+  }
+  // 规则：受击立刻开启小陀螺
+  else if (game_state_.under_attack)
+  {
+    state_.is_chase = true;
+    state_.rotate = true;
+  }
+
+  state_.is_chase = false;
+  return state_.current_state;
 }
 
 void DecisionTree::handle_guard_state()
 {
-  state_.rotate = 1.0;
-  state_.search = 1.0;
+  state_.rotate = true;
 }
 
 void DecisionTree::handle_capturing_center_state()
@@ -594,21 +500,42 @@ void DecisionTree::handle_returning_base_state()
 
 void DecisionTree::handle_approaching_enemy_state()
 {
-  double x = params_.decision_params.center_y;
-  double y = params_.decision_params.base_x * 0.9;
+  double x = params_.decision_params.center_x * params_.approaching_enemy_x;
+  double y = params_.decision_params.base_y * params_.approaching_enemy_y;
   logger("压制敌方，目标点: (" + std::to_string(x) + ", " + std::to_string(y) + ")", "info");
 
   navigate_to_point(x, y);
 }
 
+void DecisionTree::handle_chase_enemy_state()
+{
+  double enemy_x, enemy_y;
+  {
+    std::vector<double> position;
+    {
+      auto lock = read_lock(position_mutex_);
+      position = state_.position;
+    }
+    enemy_x = position[0] + params_.chase_proportion * attack_state_.enemy_distance * std::cos(position[2]);
+    enemy_y = position[1] + params_.chase_proportion * attack_state_.enemy_distance * std::sin(position[2]);
+  }
+  logger("追击模式启动", "info");
+  navigate_to_point(enemy_x, enemy_y);
+}
+
 // =============== 决策辅助方法 ===============
 
-bool DecisionTree::in_key_position(const int key) const
+bool DecisionTree::in_key_position(const int key)
 {
+  std::vector<double> position;
+  {
+    auto lock = read_lock(position_mutex_);
+    position = state_.position;
+  }
   if (key == 0)
   {
-    double distance = calculate_distance(state_.robot_x, state_.robot_y, params_.decision_params.base_x,
-                                         params_.decision_params.base_y);
+    double distance =
+        calculate_distance(position[0], position[1], params_.decision_params.base_x, params_.decision_params.base_y);
 
     if (distance < params_.position_tolerance)
     {
@@ -618,16 +545,23 @@ bool DecisionTree::in_key_position(const int key) const
   }
   else if (key == 1)
   {
-    double distance = calculate_distance(state_.robot_x, state_.robot_y, params_.decision_params.center_x,
+    double distance = calculate_distance(position[0], position[1], params_.decision_params.center_x,
                                          params_.decision_params.center_y);
 
     if (distance < params_.position_tolerance)
     {
       logger("已在增益点", "info");
+      state_.rotate = true;
       return true;
     }
   }
   return false;
+}
+
+bool DecisionTree::has_not_been_attacked_for(double duration)
+{
+  double current_time = get_current_time();
+  return (current_time - game_state_.last_attack_time) >= duration;
 }
 
 bool DecisionTree::center_captured() const
@@ -650,24 +584,24 @@ bool DecisionTree::is_normal_hp() const
   return get_hp_percentage() > params_.decision_params.normal_hp_threshold;
 }
 
-bool DecisionTree::has_not_been_attacked_for(double duration) const
+bool DecisionTree::is_chase_hp(int type) const
 {
-  double current_time = get_current_time();
-  return (current_time - game_state_.last_attack_time) >= duration;
+  if (type == 0)
+    return attack_state_.infantry_hp <= params_.chase_hp;
+  else if (type == 1)
+    return attack_state_.hero_hp <= params_.chase_hp;
+  else
+    return attack_state_.sentinel_hp <= params_.chase_hp;
 }
 
 double DecisionTree::get_hp_percentage() const
 {
-  if (game_state_.maximum_hp == 0)
-  {
-    return 0.0;
-  }
-  return static_cast<double>(game_state_.current_hp) / static_cast<double>(game_state_.maximum_hp);
+  return static_cast<double>(game_state_.current_hp) / params_.maximum_hp;
 }
 
 // =============== 工具函数 ===============
 
-void DecisionTree::pub_control_signal(const float rotate, const float search)
+void DecisionTree::pub_control_signal(const bool rotate, const bool search) const
 {
   connection_layer::msg::ControlSignal control_msg;
   control_msg.rotate = rotate;
@@ -679,47 +613,34 @@ double DecisionTree::calculate_distance(double x1, double y1, double x2, double 
 {
   double dx = x1 - x2;
   double dy = y1 - y2;
-  return std::sqrt(dx * dx + dy * dy);
+  double distance = std::sqrt(dx * dx + dy * dy);
+  return distance;
 }
 
-bool DecisionTree::is_in_map_boundary(double x, double y) const
+double DecisionTree::get_current_time()
 {
-  std::lock_guard<std::mutex> lock(map_mutex_);
-
-  if (!state_.map_available)
-  {
-    logger("地图数据不可用，无法验证边界", "warn");
-    return true;
-  }
-
-  const auto& info = map_metadata_->info;
-  double min_x = info.origin.position.x;
-  double min_y = info.origin.position.y;
-  double max_x = min_x + info.width * info.resolution;
-  double max_y = min_y + info.height * info.resolution;
-
-  bool x_valid = (min_x <= x) && (x <= max_x);
-  bool y_valid = (min_y <= y) && (y <= max_y);
-
-  return x_valid && y_valid;
+  return this->get_clock()->now().seconds();
 }
 
-double DecisionTree::get_current_time() const
+std::shared_lock<std::shared_mutex> DecisionTree::read_lock(std::shared_mutex& lock) const
 {
-  auto now = std::chrono::system_clock::now();
-  auto duration = now.time_since_epoch();
-  return std::chrono::duration<double>(duration).count();
+  return std::shared_lock<std::shared_mutex>(lock);
 }
 
-void DecisionTree::logger(const std::string& message, const char* type) const
+std::unique_lock<std::shared_mutex> DecisionTree::write_lock(std::shared_mutex& lock) const
 {
-  if (std::string(type) == "info")
+  return std::unique_lock<std::shared_mutex>(lock);
+}
+
+void DecisionTree::logger(const std::string& message, const std::string type) const
+{
+  if (type == "info")
     RCLCPP_INFO(this->get_logger(), "%s", message.c_str());
-  else if (std::string(type) == "warn")
+  else if (type == "warn")
     RCLCPP_WARN(this->get_logger(), "%s", message.c_str());
-  else if (std::string(type) == "error")
+  else if (type == "error")
     RCLCPP_ERROR(this->get_logger(), "%s", message.c_str());
-  else if (std::string(type) == "debug")
+  else if (type == "debug")
     RCLCPP_DEBUG(this->get_logger(), "%s", message.c_str());
 }
 
@@ -735,6 +656,8 @@ std::string DecisionTree::state_to_string(DecisionState state) const
       return "RETURNING_TO_BASE";
     case DecisionState::APPROACHING_ENEMY:
       return "APPROACHING_ENEMY";
+    case DecisionState::CHASE_ENEMY:
+      return "CHASE_ENEMY";
     case DecisionState::PAUSED:
       return "PAUSED";
     default:

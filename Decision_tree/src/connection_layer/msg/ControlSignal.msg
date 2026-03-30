@@ -1,2 +1,2 @@
-float32 rotate
-float32 search
+bool rotate
+bool search

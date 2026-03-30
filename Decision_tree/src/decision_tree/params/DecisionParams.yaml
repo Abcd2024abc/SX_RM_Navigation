@@ -1,16 +1,22 @@
 decision_tree:
   ros__parameters:
-    low_hp_threshold: 0.3
-    safe_hp_threshold: 0.9
-    normal_hp_threshold: 0.5
+    map_topic: map # 地图框架
+    robot_base_frame: base_footprint # 机器人框架
+    goal_topic: navigate_to_pose
 
-    base_position_x: 0.0
-    base_position_y: 0.0
-    center_position_x: 5.5
-    center_position_y: 5.5
-    no_attack_duration: 5.0
+    low_hp_threshold: 0.3 # 低生命值阈值
+    safe_hp_threshold: 0.9 # 安全生命值阈值
+    normal_hp_threshold: 0.5 # 正常生命值阈值
+    maximum_hp: 300 # 最大血量
+    chase_hp: 50 # 敌方血量此值以下追击
+    chase_proportion: 0.6 # 追击距离比例系数
+    approaching_enemy_x: 0.9 # 迫近距离比例系数
+    approaching_enemy_y: 0.9
 
-    activate_search: 5.0
+    base_position_x: 0.0 # 基地x
+    base_position_y: 0.0 # 基地y
+    center_position_x: 4.6 # 增益点
+    center_position_y: -3.6
+    under_attack_delay: 2.5 # 受击延时取消
 
-    
-
+    activate_search: 3.0 # 激活搜索
